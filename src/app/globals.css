@@ -1,42 +1,38 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-transparent: transparent;
+
+    --color-gray-200: #d5d5d5;
+    --color-gray-400: #aaaaab;
+    --color-gray-600: #7f8080;
+    --color-gray-700: #555556;
+    --color-gray-900: #1f2123;
+
+    --color-seafoam-teal-30: #25e2cc;
+
+    --color-jade: #007380;
+
+    --color-blue-900: #003d5b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@layer {
+    .container {
+        width: 100%;
+        max-width: 65rem;
+        margin: 0 auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+    @media (width >= 48rem /* 768px */) {
+        .container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
 }
