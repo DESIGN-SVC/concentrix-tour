@@ -3,6 +3,8 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
+    --font-sans: var(--font-montserrat);
+
     --color-white: #ffffff;
     --color-black: #000000;
     --color-transparent: transparent;
@@ -11,12 +13,17 @@
     --color-gray-400: #aaaaab;
     --color-gray-600: #7f8080;
     --color-gray-700: #555556;
+    --color-gray-800: #2a2b2c;
     --color-gray-900: #1f2123;
 
     --color-seafoam-teal-30: #25e2cc;
 
     --color-jade: #007380;
 
+    --color-blue-100: #e9fcfa;
+    --color-blue-300: #a8f3eb;
+    --color-blue-400: #7ceee0;
+    --color-blue-500: #51e8d6;
     --color-blue-900: #003d5b;
 }
 
@@ -33,6 +40,13 @@
         .container {
             padding-left: 2rem;
             padding-right: 2rem;
+        }
+    }
+
+    @media (width >= 65rem /* 1040px */) {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
