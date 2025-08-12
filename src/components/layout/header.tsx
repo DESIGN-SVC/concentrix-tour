@@ -1,6 +1,6 @@
 import { Concentrix, House } from "@/icons";
 import Link from "next/link";
-import { ToggleSwitch } from "../toggleSwitch";
+import { ToggleSwitch } from "../toggle-switch";
 import { cx } from "cva";
 
 export const Header = () => (

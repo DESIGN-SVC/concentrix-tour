@@ -1,4 +1,5 @@
 export * from './layout'
-export * from './toggleSwitch'
+export * from './toggle-switch'
 export * from './button'
 export * from './link'
+export * from './dropdown'

@@ -21,7 +21,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={cx(["antialiased", montserrat.variable])}>
+        <html lang="en" className={cx(["antialiased scroll-smooth", montserrat.variable])}>
             <body
                 className={cx([
                     "flex flex-col relative",

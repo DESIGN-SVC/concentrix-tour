@@ -3,6 +3,8 @@ import concentrix from "@/assets/images/brand-tour.png";
 import Image from "next/image";
 
 import { Button } from "@/components";
+import Link from "next/link";
+import { Chevron } from "@/icons";
 
 export const Presentation = () => (
     <main
@@ -61,7 +63,9 @@ export const Presentation = () => (
                         className="w-full max-w-3xs lg:max-w-[31.563rem]"
                         priority={true}
                     />
-                    <Button size={"medium"}>Comece seu Tour</Button>
+                    <Button size={"medium"} asChild>
+                        <Link href={'/tour-virtual'}>Comece seu Tour <Chevron/></Link>
+                    </Button>
                 </div>
             </div>
         </div>

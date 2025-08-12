@@ -21,10 +21,15 @@
     --color-jade: #007380;
 
     --color-blue-100: #e9fcfa;
+    --color-blue-200: #d3f9f5;
     --color-blue-300: #a8f3eb;
     --color-blue-400: #7ceee0;
     --color-blue-500: #51e8d6;
     --color-blue-900: #003d5b;
+
+    --color-pink-700: #cc3262;
+
+    --color-orange-400: #ff8400;
 }
 
 @layer {
