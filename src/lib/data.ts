@@ -1,10 +1,68 @@
+import building_facade_m2 from '@/assets/images/m2/building_facade-m2.jpg'
+import building_facade_m3 from '@/assets/images/m3/building_facade-m3.jpg'
+import building_facade_jl1 from '@/assets/images/jl1/building_facade-jl1.jpg'
+import building_facade_jl2 from '@/assets/images/jl2/building_facade-jl2.jpg'
+import building_facade_jl3 from '@/assets/images/jl3/building_facade-jl3.jpg'
+import building_facade_muricy from '@/assets/images/muricy/building_facade-muricy.jpg'
 
-import building_facade_m2 from '@/assets/images/building_facade-m2.jpg'
-import building_facade_m3 from '@/assets/images/building_facade-m3.jpg'
-import building_facade_jl1 from '@/assets/images/building_facade-jl1.jpg'
-import building_facade_jl2 from '@/assets/images/building_facade-jl2.jpg'
-import building_facade_jl3 from '@/assets/images/building_facade-jl3.jpg'
-import building_facade_muricy from '@/assets/images/building_facade-muricy.jpg'
+import m2_360_1 from '@/assets/images/m2/360/img_360-1.jpg'
+import m2_360_2 from '@/assets/images/m2/360/img_360-2.jpg'
+import m2_360_3 from '@/assets/images/m2/360/img_360-3.jpg'
+import m2_360_4 from '@/assets/images/m2/360/img_360-4.jpg'
+import m2_360_5 from '@/assets/images/m2/360/img_360-5.jpg'
+import m2_360_6 from '@/assets/images/m2/360/img_360-6.jpg'
+import m2_360_7 from '@/assets/images/m2/360/img_360-7.jpg'
+import m2_360_8 from '@/assets/images/m2/360/img_360-8.jpg'
+import m2_360_9 from '@/assets/images/m2/360/img_360-9.jpg'
+
+import m3_360_1 from '@/assets/images/m3/360/img_360-1.jpg'
+import m3_360_2 from '@/assets/images/m3/360/img_360-2.jpg'
+import m3_360_3 from '@/assets/images/m3/360/img_360-3.jpg'
+import m3_360_4 from '@/assets/images/m3/360/img_360-4.jpg'
+import m3_360_5 from '@/assets/images/m3/360/img_360-5.jpg'
+
+import jl1_360_1 from '@/assets/images/jl1/360/img_360-1.jpg'
+import jl1_360_2 from '@/assets/images/jl1/360/img_360-2.jpg'
+import jl1_360_3 from '@/assets/images/jl1/360/img_360-3.jpg'
+import jl1_360_4 from '@/assets/images/jl1/360/img_360-4.jpg'
+import jl1_360_5 from '@/assets/images/jl1/360/img_360-5.jpg'
+import jl1_360_6 from '@/assets/images/jl1/360/img_360-6.jpg'
+import jl1_360_7 from '@/assets/images/jl1/360/img_360-7.jpg'
+import jl1_360_8 from '@/assets/images/jl1/360/img_360-8.jpg'
+import jl1_360_9 from '@/assets/images/jl1/360/img_360-9.jpg'
+import jl1_360_10 from '@/assets/images/jl1/360/img_360-10.jpg'
+import jl1_360_11 from '@/assets/images/jl1/360/img_360-11.jpg'
+import jl1_360_12 from '@/assets/images/jl1/360/img_360-12.jpg'
+
+import jl2_360_1 from '@/assets/images/jl2/360/img_360-1.jpg'
+import jl2_360_2 from '@/assets/images/jl2/360/img_360-2.jpg'
+import jl2_360_3 from '@/assets/images/jl2/360/img_360-3.jpg'
+import jl2_360_4 from '@/assets/images/jl2/360/img_360-4.jpg'
+import jl2_360_5 from '@/assets/images/jl2/360/img_360-5.jpg'
+import jl2_360_6 from '@/assets/images/jl2/360/img_360-6.jpg'
+import jl2_360_7 from '@/assets/images/jl2/360/img_360-7.jpg'
+
+import jl3_360_1 from '@/assets/images/jl3/360/img_360-1.jpg'
+import jl3_360_2 from '@/assets/images/jl3/360/img_360-2.jpg'
+import jl3_360_3 from '@/assets/images/jl3/360/img_360-3.jpg'
+import jl3_360_4 from '@/assets/images/jl3/360/img_360-4.jpg'
+import jl3_360_5 from '@/assets/images/jl3/360/img_360-5.jpg'
+
+import muricy_360_1 from '@/assets/images/muricy/360/img_360-1.jpg'
+import muricy_360_2 from '@/assets/images/muricy/360/img_360-2.jpg'
+import muricy_360_3 from '@/assets/images/muricy/360/img_360-3.jpg'
+import muricy_360_4 from '@/assets/images/muricy/360/img_360-4.jpg'
+import muricy_360_5 from '@/assets/images/muricy/360/img_360-5.jpg'
+import muricy_360_6 from '@/assets/images/muricy/360/img_360-6.jpg'
+import muricy_360_7 from '@/assets/images/muricy/360/img_360-7.jpg'
+import muricy_360_8 from '@/assets/images/muricy/360/img_360-8.jpg'
+
+import m2_environments_1 from '@/assets/images/m2/environments/img_360-1.jpg'
+import m2_environments_2 from '@/assets/images/m2/environments/img_360-2.jpg'
+import m2_environments_3 from '@/assets/images/m2/environments/img_360-3.jpg'
+import m2_environments_4 from '@/assets/images/m2/environments/img_360-4.jpg'
+import m2_environments_5 from '@/assets/images/m2/environments/img_360-5.jpg'
+import m2_environments_6 from '@/assets/images/m2/environments/img_360-6.jpg'
 
 import type { StaticImageData } from 'next/image'
 
@@ -16,7 +74,9 @@ export type Building = {
         long: string
     }
     img: {
-        building_facade: StaticImageData
+        building_facade: StaticImageData,
+        pictures_360: string[],
+        environments: StaticImageData[]
     }
     text: {
         title: string
@@ -37,7 +97,9 @@ export const buildings: Building[] = [
             long: 'Marechal 2'
         },
         img: {
-            building_facade: building_facade_m2
+            building_facade: building_facade_m2,
+            pictures_360: [m2_360_1.src, m2_360_2.src, m2_360_3.src, m2_360_4.src, m2_360_5.src, m2_360_6.src, m2_360_7.src, m2_360_8.src, m2_360_9.src],
+            environments:[m2_environments_1,m2_environments_2,m2_environments_3,m2_environments_4,m2_environments_5,m2_environments_6]
         },
         text: {
             title: 'Marechal 2 – Ou para os íntimos a PRAIA.',
@@ -66,7 +128,8 @@ export const buildings: Building[] = [
             long: 'Marechal 3'
         },
         img: {
-            building_facade: building_facade_m3
+            building_facade: building_facade_m3,
+            pictures_360: [m3_360_1.src, m3_360_2.src, m3_360_3.src, m3_360_4.src, m3_360_5.src,]
         },
         text: {
             title: 'Marechal 3',
@@ -95,7 +158,9 @@ export const buildings: Building[] = [
             long: ' José Loureiro 1'
         },
         img: {
-            building_facade: building_facade_jl1
+            building_facade: building_facade_jl1,
+            pictures_360: [jl1_360_1.src, jl1_360_2.src, jl1_360_3.src, jl1_360_4.src, jl1_360_5.src, jl1_360_6.src, jl1_360_7.src, jl1_360_8.src, jl1_360_9.src, jl1_360_10.src, jl1_360_11.src, jl1_360_12.src]
+
         },
         text: {
             title: 'JL1',
@@ -125,7 +190,10 @@ export const buildings: Building[] = [
             long: 'José Loureiro 2'
         },
         img: {
-            building_facade: building_facade_jl2
+            building_facade: building_facade_jl2,
+            pictures_360: [jl2_360_1.src, jl2_360_2.src, jl2_360_3.src, jl2_360_4.src, jl2_360_5.src, jl2_360_6.src, jl2_360_7.src]
+
+
         },
         text: {
             title: 'JL2',
@@ -149,7 +217,8 @@ export const buildings: Building[] = [
             long: 'José Loureiro 3'
         },
         img: {
-            building_facade: building_facade_jl3
+            building_facade: building_facade_jl3,
+            pictures_360: [jl3_360_1.src, jl3_360_2.src, jl3_360_3.src, jl3_360_4.src, jl3_360_5.src]
         },
         text: {
             title: 'JL3',
@@ -175,7 +244,8 @@ export const buildings: Building[] = [
             long: 'Muricy'
         },
         img: {
-            building_facade: building_facade_muricy
+            building_facade: building_facade_muricy,
+            pictures_360: [muricy_360_1.src, muricy_360_2.src, muricy_360_3.src, muricy_360_4.src, muricy_360_5.src, muricy_360_6.src, muricy_360_7.src, muricy_360_8.src]
         },
         text: {
             title: 'Muricy',

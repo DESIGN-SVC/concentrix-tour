@@ -2,7 +2,7 @@
 import { Counter } from "@/utils";
 import { cx } from "cva";
 
-type BuildingDescriptionProps = {
+type BuildingAboutProps = {
     title: string;
     description: string;
     values: {
@@ -10,11 +10,11 @@ type BuildingDescriptionProps = {
         description: string;
     }[];
 };
-export const BuildingDescription = ({
+export const BuildingAbout = ({
     title,
     description,
     values,
-}: BuildingDescriptionProps) => (
+}: BuildingAboutProps) => (
     <section
         className={cx(
             "w-full py-20 pb-14",
@@ -59,7 +59,7 @@ export const BuildingDescription = ({
                                     index === 0,
                                 "bg-seafoam-teal-30 text-blue-900 row-start-2":
                                     index === 1,
-                                "bg-jade text-blue-500 row-start-2":
+                                "bg-jade text-blue-50 row-start-2":
                                     index === 2,
                             }
                         )}
@@ -71,7 +71,6 @@ export const BuildingDescription = ({
                             )}
                         >
                             <Counter endValue={value} duration={2000} />
-
                             {value >= 1000 && "K"}
                         </h5>
                         <p

@@ -20,6 +20,7 @@ const tw = cva(
         "before:bg-black/5 before:rounded-[80%]",
 
         "hover:before:scale-y-125 hover:before:scale-x-75 hover:before:top-[-35%]",
+        'disabled:cursor-not-allowed'
     ],
     {
         variants: {
@@ -44,14 +45,15 @@ const tw = cva(
                 ghost: [
                     "text-blue-900",
                     "bg-transparent border border-blue-900",
-                    'hover:before:bg-blue-200'
+                    'hover:before:bg-blue-200',
+                    'disabled:before:hidden disabled:border-gray-200 disabled:text-gray-200'
                 ],
             },
         },
         compoundVariants: [
             {
                 appearance: ["primary", "secondary"],
-                className: ["focus:outline-4"],
+                className: ["focus:outline-4",'disabled:before:hidden disabled:text-gray-400 disabled:bg-gray-200'],
             },
         ],
         defaultVariants: {

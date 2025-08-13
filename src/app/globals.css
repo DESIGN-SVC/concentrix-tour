@@ -30,6 +30,21 @@
     --color-pink-700: #cc3262;
 
     --color-orange-400: #ff8400;
+
+
+    --animate-border-gradient: border-gradient 3s ease alternate infinite;
+
+    @keyframes border-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 }
 
 @layer {

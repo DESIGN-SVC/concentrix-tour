@@ -2,7 +2,9 @@ import { findBuildings } from "@/app/hooks/findBuildings";
 import { Address } from "./address";
 import { redirect } from "next/navigation";
 import { Navigation } from "./navigation";
-import { BuildingDescription } from "./building-description";
+import { BuildingAbout } from "./building-about";
+import { Images360 } from "./images-360";
+import { PhotosEnvironments } from "./photos-environments";
 
 interface LocationPageProps {
     params: Promise<{
@@ -25,7 +27,6 @@ export default async function LocationPage({
     if (!location) {
         redirect("home");
     }
-    console.log(location);
 
     return (
         <main className="flex-1 w-full">
@@ -39,11 +40,13 @@ export default async function LocationPage({
                 <Navigation />
             </div>
 
-            <BuildingDescription
+            <BuildingAbout
                 title={location.text.title}
                 description={location.text.description}
                 values={location.values}
             />
+            <PhotosEnvironments photos_environments={location.img.environments}/>
+            <Images360 pictures_360={location.img.pictures_360} />
         </main>
     );
 }
