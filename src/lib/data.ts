@@ -64,6 +64,58 @@ import m2_environments_4 from '@/assets/images/m2/environments/img_360-4.jpg'
 import m2_environments_5 from '@/assets/images/m2/environments/img_360-5.jpg'
 import m2_environments_6 from '@/assets/images/m2/environments/img_360-6.jpg'
 
+import m3_environments_1 from '@/assets/images/m3/environments/img_360-1.jpg'
+import m3_environments_2 from '@/assets/images/m3/environments/img_360-2.jpg'
+import m3_environments_3 from '@/assets/images/m3/environments/img_360-3.jpg'
+import m3_environments_4 from '@/assets/images/m3/environments/img_360-4.jpg'
+import m3_environments_5 from '@/assets/images/m3/environments/img_360-5.jpg'
+import m3_environments_6 from '@/assets/images/m3/environments/img_360-6.jpg'
+
+import jl1_environments_1 from '@/assets/images/jl1/environments/img_360-1.jpg'
+import jl1_environments_2 from '@/assets/images/jl1/environments/img_360-2.jpg'
+import jl1_environments_3 from '@/assets/images/jl1/environments/img_360-3.jpg'
+import jl1_environments_4 from '@/assets/images/jl1/environments/img_360-4.jpg'
+import jl1_environments_5 from '@/assets/images/jl1/environments/img_360-5.jpg'
+import jl1_environments_6 from '@/assets/images/jl1/environments/img_360-6.jpg'
+import jl1_environments_7 from '@/assets/images/jl1/environments/img_360-7.jpg'
+import jl1_environments_8 from '@/assets/images/jl1/environments/img_360-8.jpg'
+import jl1_environments_9 from '@/assets/images/jl1/environments/img_360-9.jpg'
+
+import jl2_environments_1 from '@/assets/images/jl2/environments/img_360-1.jpg'
+import jl2_environments_2 from '@/assets/images/jl2/environments/img_360-2.jpg'
+import jl2_environments_3 from '@/assets/images/jl2/environments/img_360-3.jpg'
+import jl2_environments_4 from '@/assets/images/jl2/environments/img_360-4.jpg'
+import jl2_environments_5 from '@/assets/images/jl2/environments/img_360-5.jpg'
+import jl2_environments_6 from '@/assets/images/jl2/environments/img_360-6.jpg'
+import jl2_environments_7 from '@/assets/images/jl2/environments/img_360-7.jpg'
+import jl2_environments_8 from '@/assets/images/jl2/environments/img_360-8.jpg'
+import jl2_environments_9 from '@/assets/images/jl2/environments/img_360-9.jpg'
+import jl2_environments_10 from '@/assets/images/jl2/environments/img_360-10.jpg'
+
+import jl3_environments_1 from '@/assets/images/jl3/environments/img_360-1.jpg'
+import jl3_environments_2 from '@/assets/images/jl3/environments/img_360-2.jpg'
+import jl3_environments_3 from '@/assets/images/jl3/environments/img_360-3.jpg'
+import jl3_environments_4 from '@/assets/images/jl3/environments/img_360-4.jpg'
+import jl3_environments_5 from '@/assets/images/jl3/environments/img_360-5.jpg'
+import jl3_environments_6 from '@/assets/images/jl3/environments/img_360-6.jpg'
+import jl3_environments_7 from '@/assets/images/jl3/environments/img_360-7.jpg'
+
+import muricy_environments_1 from '@/assets/images/muricy/environments/img_360-1.jpg'
+import muricy_environments_2 from '@/assets/images/muricy/environments/img_360-2.jpg'
+import muricy_environments_3 from '@/assets/images/muricy/environments/img_360-3.jpg'
+import muricy_environments_4 from '@/assets/images/muricy/environments/img_360-4.jpg'
+import muricy_environments_5 from '@/assets/images/muricy/environments/img_360-5.jpg'
+import muricy_environments_6 from '@/assets/images/muricy/environments/img_360-6.jpg'
+import muricy_environments_7 from '@/assets/images/muricy/environments/img_360-7.jpg'
+import muricy_environments_8 from '@/assets/images/muricy/environments/img_360-8.jpg'
+import muricy_environments_9 from '@/assets/images/muricy/environments/img_360-9.jpg'
+import muricy_environments_10 from '@/assets/images/muricy/environments/img_360-10.jpg'
+import muricy_environments_11 from '@/assets/images/muricy/environments/img_360-11.jpg'
+import muricy_environments_12 from '@/assets/images/muricy/environments/img_360-12.jpg'
+import muricy_environments_13 from '@/assets/images/muricy/environments/img_360-13.jpg'
+import muricy_environments_14 from '@/assets/images/muricy/environments/img_360-14.jpg'
+import muricy_environments_15 from '@/assets/images/muricy/environments/img_360-15.jpg'
+
 import type { StaticImageData } from 'next/image'
 
 export type Building = {
@@ -99,7 +151,7 @@ export const buildings: Building[] = [
         img: {
             building_facade: building_facade_m2,
             pictures_360: [m2_360_1.src, m2_360_2.src, m2_360_3.src, m2_360_4.src, m2_360_5.src, m2_360_6.src, m2_360_7.src, m2_360_8.src, m2_360_9.src],
-            environments:[m2_environments_1,m2_environments_2,m2_environments_3,m2_environments_4,m2_environments_5,m2_environments_6]
+            environments: [m2_environments_1, m2_environments_2, m2_environments_3, m2_environments_4, m2_environments_5, m2_environments_6]
         },
         text: {
             title: 'Marechal 2 – Ou para os íntimos a PRAIA.',
@@ -129,7 +181,9 @@ export const buildings: Building[] = [
         },
         img: {
             building_facade: building_facade_m3,
-            pictures_360: [m3_360_1.src, m3_360_2.src, m3_360_3.src, m3_360_4.src, m3_360_5.src,]
+            pictures_360: [m3_360_1.src, m3_360_2.src, m3_360_3.src, m3_360_4.src, m3_360_5.src,],
+            environments: [m3_environments_1, m3_environments_2, m3_environments_3, m3_environments_4, m3_environments_5, m3_environments_6]
+
         },
         text: {
             title: 'Marechal 3',
@@ -159,7 +213,8 @@ export const buildings: Building[] = [
         },
         img: {
             building_facade: building_facade_jl1,
-            pictures_360: [jl1_360_1.src, jl1_360_2.src, jl1_360_3.src, jl1_360_4.src, jl1_360_5.src, jl1_360_6.src, jl1_360_7.src, jl1_360_8.src, jl1_360_9.src, jl1_360_10.src, jl1_360_11.src, jl1_360_12.src]
+            pictures_360: [jl1_360_1.src, jl1_360_2.src, jl1_360_3.src, jl1_360_4.src, jl1_360_5.src, jl1_360_6.src, jl1_360_7.src, jl1_360_8.src, jl1_360_9.src, jl1_360_10.src, jl1_360_11.src, jl1_360_12.src],
+            environments: [jl1_environments_1, jl1_environments_2, jl1_environments_3, jl1_environments_4, jl1_environments_5, jl1_environments_6, jl1_environments_7, jl1_environments_8, jl1_environments_9]
 
         },
         text: {
@@ -191,9 +246,8 @@ export const buildings: Building[] = [
         },
         img: {
             building_facade: building_facade_jl2,
-            pictures_360: [jl2_360_1.src, jl2_360_2.src, jl2_360_3.src, jl2_360_4.src, jl2_360_5.src, jl2_360_6.src, jl2_360_7.src]
-
-
+            pictures_360: [jl2_360_1.src, jl2_360_2.src, jl2_360_3.src, jl2_360_4.src, jl2_360_5.src, jl2_360_6.src, jl2_360_7.src],
+            environments: [jl2_environments_1, jl2_environments_2, jl2_environments_3, jl2_environments_4, jl2_environments_5, jl2_environments_6, jl2_environments_7, jl2_environments_8, jl2_environments_9, jl2_environments_10]
         },
         text: {
             title: 'JL2',
@@ -218,7 +272,8 @@ export const buildings: Building[] = [
         },
         img: {
             building_facade: building_facade_jl3,
-            pictures_360: [jl3_360_1.src, jl3_360_2.src, jl3_360_3.src, jl3_360_4.src, jl3_360_5.src]
+            pictures_360: [jl3_360_1.src, jl3_360_2.src, jl3_360_3.src, jl3_360_4.src, jl3_360_5.src],
+            environments: [jl3_environments_1, jl3_environments_2, jl3_environments_3, jl3_environments_4, jl3_environments_5, jl3_environments_6, jl3_environments_7]
         },
         text: {
             title: 'JL3',
@@ -245,7 +300,8 @@ export const buildings: Building[] = [
         },
         img: {
             building_facade: building_facade_muricy,
-            pictures_360: [muricy_360_1.src, muricy_360_2.src, muricy_360_3.src, muricy_360_4.src, muricy_360_5.src, muricy_360_6.src, muricy_360_7.src, muricy_360_8.src]
+            pictures_360: [muricy_360_1.src, muricy_360_2.src, muricy_360_3.src, muricy_360_4.src, muricy_360_5.src, muricy_360_6.src, muricy_360_7.src, muricy_360_8.src],
+            environments: [muricy_environments_1,muricy_environments_2,muricy_environments_3,muricy_environments_4,muricy_environments_5,muricy_environments_6,muricy_environments_7,muricy_environments_8,muricy_environments_9,muricy_environments_10,muricy_environments_11,muricy_environments_12,muricy_environments_13,muricy_environments_14,muricy_environments_15]
         },
         text: {
             title: 'Muricy',

@@ -1,21 +1,22 @@
 import { cva, VariantProps } from "cva";
 import Anchor, { LinkProps as RouteProps } from "next/link";
-import { ComponentProps } from "react";
+import { PropsWithChildren, Ref } from "react";
 
 const tw = cva(
-    [   'relative',
+    [
+        "relative",
         "flex items-center gap-1",
-        'w-fit',
+        "w-fit",
         "font-semibold",
-        "after:absolute after:left-1/2 after:-right-1/2 after:bottom-0",
+        "after:absolute after:left-1/2 after:-right-1/2 after:-bottom-[1px]",
         "after:w-0 after:h-[1px]",
-        'after:duration-300 after:ease-in-out',
-        'hover:after:w-full hover:after:left-0'
+        "after:duration-300 after:ease-in-out",
+        "hover:after:w-full hover:after:left-0",
     ],
     {
         variants: {
             appearance: {
-                primary: ["text-white",'after:bg-white'],
+                primary: ["text-white", "after:bg-white"],
             },
         },
         defaultVariants: {
@@ -24,7 +25,12 @@ const tw = cva(
     }
 );
 
-type LinksProps = RouteProps & ComponentProps<"a"> & VariantProps<typeof tw>;
-export const Link = ({ className, ...props }: LinksProps) => (
-    <Anchor className={tw({ className })} {...props} />
+export type LinksProps = RouteProps &
+    VariantProps<typeof tw> & {
+        className?: string;
+        ref?: Ref<HTMLAnchorElement>;
+    } & PropsWithChildren;
+
+export const Link = ({ className, appearance, ...props }: LinksProps) => (
+    <Anchor className={tw({ className, appearance })} {...props} />
 );
