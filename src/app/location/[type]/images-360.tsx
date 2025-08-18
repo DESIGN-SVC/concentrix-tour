@@ -24,7 +24,7 @@ export const Images360 = ({ pictures_360 }: Images360Props) => {
         );
     };
     return (
-        <aside className={cx("w-full bg-blue-900", "py-14", "lg:py-[6.25rem]")}>
+        <aside className={cx("w-full bg-blue-900 rounded-b-4xl", "py-14", "lg:py-[6.25rem]")}>
             <div className={cx("flex flex-col gap-8", "container")}>
                 <header
                     className={cx(

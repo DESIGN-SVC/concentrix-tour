@@ -138,6 +138,12 @@ export type Building = {
         value: number
         description: string
     }[]
+    model_operations: {
+        type: string,
+        title: string
+        description: string
+    }[]
+
 };
 
 export const buildings: Building[] = [
@@ -170,6 +176,24 @@ export const buildings: Building[] = [
                 value: 1085,
                 description: 'Postos de atendimento.'
             }
+        ],
+        model_operations: [
+            {
+                type: 'Cobrança',
+                title: 'Cobrança',
+                description: 'Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.'
+            },
+            {
+                type: 'CX',
+                title: 'Customer Experience (CX)',
+                description: 'A experiência do cliente está no centro de tudo o que fazemos. Nosso atendimento de CX é voltado para garantir um suporte ágil, empático e resolutivo em todos os pontos de contato com o consumidor, promovendo satisfação, fidelização e valor à marca.'
+            },
+            {
+                type: 'Treinamento',
+                title: 'Treinamento',
+                description: 'Na Concentrix, acreditamos que o sucesso começa com uma base sólida. É por isso que o setor de Treinamento é uma peça fundamental da nossa cultura e operação. Aqui é onde os nossos Game Changers iniciam sua trajetória, recebendo todo o conhecimento, suporte e inspiração necessários para transformar experiências e impulsionar resultados.'
+            }
+
         ]
     },
     {
@@ -301,7 +325,7 @@ export const buildings: Building[] = [
         img: {
             building_facade: building_facade_muricy,
             pictures_360: [muricy_360_1.src, muricy_360_2.src, muricy_360_3.src, muricy_360_4.src, muricy_360_5.src, muricy_360_6.src, muricy_360_7.src, muricy_360_8.src],
-            environments: [muricy_environments_1,muricy_environments_2,muricy_environments_3,muricy_environments_4,muricy_environments_5,muricy_environments_6,muricy_environments_7,muricy_environments_8,muricy_environments_9,muricy_environments_10,muricy_environments_11,muricy_environments_12,muricy_environments_13,muricy_environments_14,muricy_environments_15]
+            environments: [muricy_environments_1, muricy_environments_2, muricy_environments_3, muricy_environments_4, muricy_environments_5, muricy_environments_6, muricy_environments_7, muricy_environments_8, muricy_environments_9, muricy_environments_10, muricy_environments_11, muricy_environments_12, muricy_environments_13, muricy_environments_14, muricy_environments_15]
         },
         text: {
             title: 'Muricy',

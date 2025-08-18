@@ -5,6 +5,7 @@ import { Chevron, Expand } from "@/icons";
 import { cx } from "cva";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
 
 type CarouselProps = {
@@ -17,6 +18,9 @@ export const Carousel = ({ photos_environments }: CarouselProps) => {
     const carouselRef = useRef<HTMLUListElement>(null);
     const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
     const directionRef = useRef<"next" | "prev">("next");
+
+    const params = useSearchParams();
+    const building = params.get("building")
 
     function nextImage() {
         directionRef.current = "next";
@@ -92,6 +96,7 @@ export const Carousel = ({ photos_environments }: CarouselProps) => {
                             onClick={(e) => e.stopPropagation()}
                             href={{
                                 query: {
+                                    building:building,
                                     modal: "photos-environments",
                                     index: index,
                                 },

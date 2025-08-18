@@ -22,6 +22,7 @@ export const ExpandedImageModal = ({
     const handleClosedModal = () => {
         router.back();
     };
+
     return (
         <Modal.Root open={isModalOpen} onOpenChange={handleClosedModal}>
             <Modal.Portal>
@@ -33,17 +34,17 @@ export const ExpandedImageModal = ({
                         "container p-2.5",
                         "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[100]",
                         "bg-transparent"
-                        /* "data-[state=closed]:animate-contentHide data-[state=open]:animate-contentShow" */
                     )}
+                    aria-describedby={undefined}
                 >
+                    <Modal.Title hidden>Imagem</Modal.Title>
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0 }}
-                        transition={{ duration: 0.1 }}
+                        transition={{ duration: 0.3 }}
                         className="relative"
                     >
-                        <Modal.Title> </Modal.Title>
                         <Modal.Close
                             className={cx(
                                 "text-white",
@@ -56,6 +57,7 @@ export const ExpandedImageModal = ({
                             <X />
                         </Modal.Close>
                         <Image
+                            priority
                             src={photos_environments[imageIndex]}
                             alt=""
                             className={cx(

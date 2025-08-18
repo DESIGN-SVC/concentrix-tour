@@ -24,6 +24,7 @@ export const Address = ({ title, city, address, background }: HeaderProps) => (
         )}
     >
         <Image
+            priority
             src={background}
             alt={`imagem da fachada do prédio ${title}`}
             className="absolute left-0 object-cover top-0 w-full h-full -z-10"

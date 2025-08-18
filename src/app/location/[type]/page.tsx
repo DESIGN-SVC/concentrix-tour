@@ -5,6 +5,8 @@ import { Navigation } from "./navigation";
 import { BuildingAbout } from "./building-about";
 import { Images360 } from "./images-360";
 import { PhotosEnvironments } from "./photos-environments";
+import { Operations } from "./operations";
+
 
 interface LocationPageProps {
     params: Promise<{
@@ -27,6 +29,7 @@ export default async function LocationPage({
     if (!location) {
         redirect("home");
     }
+    (location)
 
     return (
         <main className="flex-1 w-full">
@@ -45,7 +48,10 @@ export default async function LocationPage({
                 description={location.text.description}
                 values={location.values}
             />
-            <PhotosEnvironments photos_environments={location.img.environments}/>
+            <PhotosEnvironments
+                photos_environments={location.img.environments}
+            />
+            <Operations model_operations={location.model_operations}/>
             <Images360 pictures_360={location.img.pictures_360} />
         </main>
     );
