@@ -13,7 +13,7 @@ export const PhotosEnvironments = ({
 }: PhotosEnvironments) => {
     return (
         <>
-            <section className={cx("bg-white", "w-full py-14", "lg:py-24")}>
+            <section id="photos_environments" className={cx("bg-white", "w-full py-14", "lg:py-24")}>
                 <article
                     className={cx(
                         "container",

@@ -13,11 +13,13 @@ type OperationsProps = {
 
 export const Operations = ({ model_operations }: OperationsProps) => {
     return (
-        <section className={cx("bg-blue-900 rounded-t-4xl", "w-full py-14")}>
+        <section
+            id="operations"
+            className={cx("bg-blue-900 rounded-t-4xl", "w-full py-14")}
+        >
             <div className="container space-y-14.5">
-                
-                    <ModelOperations model_operations={model_operations} />
-                <hr className="text-gray-700"/>
+                <ModelOperations model_operations={model_operations} />
+                <hr className="text-gray-700" />
                 <article className="space-y-12">
                     <SubTitle>O que oferecemos:</SubTitle>
                     <Carousel />
@@ -26,4 +28,3 @@ export const Operations = ({ model_operations }: OperationsProps) => {
         </section>
     );
 };
-

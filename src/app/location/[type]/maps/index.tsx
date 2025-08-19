@@ -5,7 +5,7 @@ const Map = dynamic(() => import("./maps-components"), {
     ssr: false,
 });
 
-type Addresses = {
+type MapsProps = {
     addresses: {
         pin_name: string;
         coordinates: {
@@ -16,6 +16,6 @@ type Addresses = {
         active:boolean
     }[];
 };
-export const Addresses = ({ addresses }: Addresses) => {
+export const Maps = ({ addresses }: MapsProps) => {
     return <Map addresses={addresses} />;
 };

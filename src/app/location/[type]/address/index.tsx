@@ -1,5 +1,4 @@
-import { Button, Dropdown } from "@/components";
-import { Chevron } from "@/icons";
+import { Dropdown, Link } from "@/components";
 import { cx } from "cva";
 import Image, { StaticImageData } from "next/image";
 import { AddressButtonRouter } from "./address-button-router";
@@ -9,9 +8,16 @@ type HeaderProps = {
     city: string;
     address: string;
     background: StaticImageData;
+    listBuildings: string[];
 };
 
-export const Address = ({ title, city, address, background }: HeaderProps) => (
+export const Address = ({
+    title,
+    city,
+    address,
+    background,
+    listBuildings,
+}: HeaderProps) => (
     <header
         className={cx(
             "relative z-0",
@@ -32,7 +38,20 @@ export const Address = ({ title, city, address, background }: HeaderProps) => (
         <div className={cx("container pt-11 pb-24", "lg:py-[4.5rem]")}>
             <div className="w-full flex items-center justify-between">
                 <AddressButtonRouter />
-                <Dropdown />
+                <Dropdown.Root>
+                    {listBuildings?.map((building) => (
+                        <Dropdown.List key={building} value={building} asChild>
+                            <Link
+                                appearance={"secondary"}
+                                href={`/location/${city}?building=${building}`}
+                                
+                            >
+                                <span className="capitalize">{city}</span>-{" "}
+                                {building}
+                            </Link>
+                        </Dropdown.List>
+                    ))}
+                </Dropdown.Root>
             </div>
             <div
                 className={cx(

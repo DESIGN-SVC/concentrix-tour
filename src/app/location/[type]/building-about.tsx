@@ -16,6 +16,7 @@ export const BuildingAbout = ({
     values,
 }: BuildingAboutProps) => (
     <section
+    id={`about-${title}`}
         className={cx(
             "w-full py-20 pb-14",
             "bg-white",

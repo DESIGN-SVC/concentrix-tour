@@ -49,21 +49,22 @@ export const Navigation = ({
                     "lg:left-0 lg:w-full lg:-top-6"
                 )}
             >
-                {listLinks.map(({ text, icon }) => (
+                {listLinks.map(({ text, icon, link }) => (
                     <a
+                        href={link}
                         key={text}
                         className={cx(
                             "flex flex-col items-center gap-1",
                             "cursor-pointer",
-                            'duration-300 ease-in',
-                            "lg:flex-row lg:gap-3",
+                            "duration-300 ease-in",
+                            "lg:flex-row lg:gap-3"
                         )}
                     >
                         <Slot className="text-jade">{icon}</Slot>
                         <p className="text-xs font-semibold text-blue-900 lg:text-lg">
                             {text}
                         </p>
-                        <Chevron className="size-4 max-lg:hidden"/>
+                        <Chevron className="size-4 max-lg:hidden" />
                     </a>
                 ))}
             </div>

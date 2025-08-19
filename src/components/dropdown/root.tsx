@@ -1,9 +1,10 @@
 import { Building, Chevron } from "@/icons";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { cx } from "cva";
-import { Button } from "./button";
+import { Button } from "../button";
+import { PropsWithChildren } from "react";
 
-export const Dropdown = () => {
+export const Root = ({ children }: PropsWithChildren) => {
     return (
         <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild>
@@ -18,17 +19,22 @@ export const Dropdown = () => {
                     aria-label="Customise options"
                 >
                     <Building />
-                    <span className="text-xs font-semibold lg:hidden">Prédio</span>
-                    <span className="text-xs font-semibold max-lg:hidden">Escolha o prédio</span>
+                    <span className="text-xs font-semibold lg:hidden">
+                        Prédio
+                    </span>
+                    <span className="text-xs font-semibold max-lg:hidden">
+                        Escolha o prédio
+                    </span>
                     <Chevron className="size-4.5 rotate-90" />
                 </Button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Portal>
                 <DropdownMenu.Content
                     sideOffset={10}
-                    className={cx("bg-white rounded-3xl", "px-6 py-4")}
+                    className={cx("bg-white rounded-3xl shadow", " py-4",'min-w-fit','z-50')}
                 >
-                    <DropdownMenu.Item>New Tab</DropdownMenu.Item>
+                    {children}
+                    <DropdownMenu.Arrow className="fill-white" />
                 </DropdownMenu.Content>
             </DropdownMenu.Portal>
         </DropdownMenu.Root>
