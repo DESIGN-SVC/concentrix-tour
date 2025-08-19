@@ -2,14 +2,14 @@ import { Chevron } from "@/icons";
 import { cx } from "cva";
 import { ComponentProps } from "react";
 
-type CarouselBtnScrollProps = ComponentProps<"button"> & {
+type BtnScrollProps = ComponentProps<"button"> & {
     direction: "prev" | "next";
 };
 
-export const CarouselBtnScroll = ({
+export const BtnScroll = ({
     direction,
     ...props
-}: CarouselBtnScrollProps) => (
+}: BtnScrollProps) => (
     <button
         className={cx(
             "w-11 h-8",

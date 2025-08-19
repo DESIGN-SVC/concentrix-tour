@@ -3,7 +3,7 @@
 import * as Tabs from "@radix-ui/react-tabs";
 import { cx } from "cva";
 import { useState } from "react";
-import { SubTitle } from "./sub-title";
+import { SubTitle } from "../../../../components/sub-title";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components";
@@ -25,7 +25,6 @@ type ModelOperationsProps = {
 export const ModelOperations = ({ model_operations }: ModelOperationsProps) => {
     const types = model_operations.flatMap((el) => el.type);
     const [typeTab, setTypeTab] = useState<string>(types[0]);
-    console.log(typeTab);
 
     const handleCarouselScroll = (direction: "prev" | "next") => {
         const currentIndex = types.indexOf(typeTab);
@@ -82,10 +81,10 @@ export const ModelOperations = ({ model_operations }: ModelOperationsProps) => {
                                     "duration-300 ease-in",
                                     "font-bold",
                                     {
-                                        "border-jade text-jade bg-blue-300":
-                                            el.type === typeTab,
-                                        "border-gray-400 text-gray-400":
-                                            el.type !== typeTab,
+                                        "border-jade text-jade bg-blue-300": ['Cobrança','Tecnologia'].includes(el.type) && el.type === typeTab,                                            
+                                        "border-yellow-500 text-gray-800 bg-yellow-400":el.type === 'CX' && el.type === typeTab,
+                                        "border-pink-700 text-pink-700 bg-pink-50": ['Treinamento','Apoio'].includes(el.type) && el.type === typeTab,
+                                        "border-gray-400 text-gray-400 bg-transparent": el.type !== typeTab,
                                     }
                                 )}
                             >

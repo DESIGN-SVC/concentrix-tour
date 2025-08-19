@@ -1,11 +1,11 @@
 import { cx } from "cva";
 import { PropsWithChildren, Ref } from "react";
 
-type CarouselRootListProps = {
+type RootProps = {
     ref?: Ref<HTMLUListElement>;
 } & PropsWithChildren;
 
-export const CarouselRootList = ({ children, ref }: CarouselRootListProps) => (
+export const Root = ({ children, ref }: RootProps) => (
     <ul
         className={cx(
             "flex items-center gap-3",

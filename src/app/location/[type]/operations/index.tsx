@@ -1,7 +1,7 @@
 import { cx } from "cva";
 import { Carousel } from "./carousel";
 import { ModelOperations } from "./model-operations";
-import { SubTitle } from "./sub-title";
+import { SubTitle } from "../../../../components/sub-title";
 
 type OperationsProps = {
     model_operations: {

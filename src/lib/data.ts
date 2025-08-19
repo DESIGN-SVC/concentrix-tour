@@ -120,7 +120,12 @@ import type { StaticImageData } from 'next/image'
 
 export type Building = {
     city: string;
-    address: string
+    address: {
+        full_address: string,
+        coordinates: {
+            lat: number, lng: number
+        }
+    }
     names: {
         short: string
         long: string
@@ -149,7 +154,12 @@ export type Building = {
 export const buildings: Building[] = [
     {
         city: "curitiba",
-        address: 'R. Mal. Deodoro, 421, Centro - Curitiba - PR, 80020-320',
+        address: {
+            full_address: 'R. Mal. Deodoro, 421, Centro - Curitiba - PR, 80020-320',
+            coordinates: {
+                lat: -25.430643, lng: -49.2685375
+            }
+        },
         names: {
             short: "M2",
             long: 'Marechal 2'
@@ -198,7 +208,12 @@ export const buildings: Building[] = [
     },
     {
         city: "curitiba",
-        address: 'R. Mal. Deodoro, 170, Centro - Curitiba - PR, 80010-010',
+        address: {
+            full_address: 'R. Mal. Deodoro, 170, Centro - Curitiba - PR, 80010-010',
+            coordinates: {
+                lat: -25.4320865, lng: -49.2705542
+            }
+        },
         names: {
             short: "M3",
             long: 'Marechal 3'
@@ -226,11 +241,34 @@ export const buildings: Building[] = [
                 value: 822,
                 description: 'Postos de atendimento.'
             }
+        ],
+        model_operations: [
+            {
+                type: 'Cobrança',
+                title: 'Cobrança',
+                description: 'Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.'
+            },
+            {
+                type: 'CX',
+                title: 'Customer Experience (CX)',
+                description: 'A experiência do cliente está no centro de tudo o que fazemos. Nosso atendimento de CX é voltado para garantir um suporte ágil, empático e resolutivo em todos os pontos de contato com o consumidor, promovendo satisfação, fidelização e valor à marca.'
+            },
+            {
+                type: 'Treinamento',
+                title: 'Treinamento',
+                description: 'Na Concentrix, acreditamos que o sucesso começa com uma base sólida. É por isso que o setor de Treinamento é uma peça fundamental da nossa cultura e operação. Aqui é onde os nossos Game Changers iniciam sua trajetória, recebendo todo o conhecimento, suporte e inspiração necessários para transformar experiências e impulsionar resultados.'
+            }
+
         ]
     },
     {
         city: "curitiba",
-        address: 'R. José Loureiro, 371, Centro - Curitiba - PR, 80010-000',
+        address: {
+            full_address: 'R. José Loureiro, 371, Centro - Curitiba - PR, 80010-000',
+            coordinates: {
+                lat: -25.432024, lng: -49.2689408
+            }
+        },
         names: {
             short: "JL1",
             long: ' José Loureiro 1'
@@ -258,12 +296,33 @@ export const buildings: Building[] = [
                 value: 977,
                 description: 'Postos de atendimento.'
             }
+        ],
+        model_operations: [
+            {
+                type: 'Tecnologia',
+                title: 'Tecnologia',
+                description: 'Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.'
+            },
+            {
+                type: 'CX',
+                title: 'Customer Experience (CX)',
+                description: 'A experiência do cliente está no centro de tudo o que fazemos. Nosso atendimento de CX é voltado para garantir um suporte ágil, empático e resolutivo em todos os pontos de contato com o consumidor, promovendo satisfação, fidelização e valor à marca.'
+            },
+            {
+                type: 'Apoio',
+                title: 'Treinamento',
+                description: 'Na Concentrix, acreditamos que o sucesso começa com uma base sólida. É por isso que o setor de Treinamento é uma peça fundamental da nossa cultura e operação. Aqui é onde os nossos Game Changers iniciam sua trajetória, recebendo todo o conhecimento, suporte e inspiração necessários para transformar experiências e impulsionar resultados.'
+            }
         ]
-
     },
     {
         city: "curitiba",
-        address: 'R. José Loureiro, 540, Centro - Curitiba - PR, 80010-000',
+        address: {
+            full_address: 'R. José Loureiro, 540, Centro - Curitiba - PR, 80010-000',
+            coordinates: {
+                lat: -25.4318843, lng: -49.2672872
+            }
+        },
         names: {
             short: "JL2",
             long: 'José Loureiro 2'
@@ -285,11 +344,34 @@ export const buildings: Building[] = [
             {
                 value: 1576, description: 'Postos de atendimento.'
             }
+        ],
+        model_operations: [
+            {
+                type: 'Cobrança',
+                title: 'Cobrança',
+                description: 'Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.'
+            },
+            {
+                type: 'CX',
+                title: 'Customer Experience (CX)',
+                description: 'A experiência do cliente está no centro de tudo o que fazemos. Nosso atendimento de CX é voltado para garantir um suporte ágil, empático e resolutivo em todos os pontos de contato com o consumidor, promovendo satisfação, fidelização e valor à marca.'
+            },
+            {
+                type: 'Treinamento',
+                title: 'Treinamento',
+                description: 'Na Concentrix, acreditamos que o sucesso começa com uma base sólida. É por isso que o setor de Treinamento é uma peça fundamental da nossa cultura e operação. Aqui é onde os nossos Game Changers iniciam sua trajetória, recebendo todo o conhecimento, suporte e inspiração necessários para transformar experiências e impulsionar resultados.'
+            }
+
         ]
     },
     {
         city: "curitiba",
-        address: 'R. José Loureiro, 376, Centro - Curitiba - PR, 80010-000',
+        address: {
+            full_address: 'R. José Loureiro, 376, Centro - Curitiba - PR, 80010-000',
+            coordinates: {
+                lat: -25.4323498, lng: -49.268783,
+            }
+        },
         names: {
             short: "JL3",
             long: 'José Loureiro 3'
@@ -313,13 +395,36 @@ export const buildings: Building[] = [
                 description: 'Salas de treinamento.'
             },
             { value: 585, description: 'Postos de atendimento.' }
+        ],
+        model_operations: [
+            {
+                type: 'Tecnologia',
+                title: 'Tecnologia',
+                description: 'Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.'
+            },
+            {
+                type: 'CX',
+                title: 'Customer Experience (CX)',
+                description: 'A experiência do cliente está no centro de tudo o que fazemos. Nosso atendimento de CX é voltado para garantir um suporte ágil, empático e resolutivo em todos os pontos de contato com o consumidor, promovendo satisfação, fidelização e valor à marca.'
+            },
+            {
+                type: 'Treinamento',
+                title: 'Treinamento',
+                description: 'Na Concentrix, acreditamos que o sucesso começa com uma base sólida. É por isso que o setor de Treinamento é uma peça fundamental da nossa cultura e operação. Aqui é onde os nossos Game Changers iniciam sua trajetória, recebendo todo o conhecimento, suporte e inspiração necessários para transformar experiências e impulsionar resultados.'
+            }
+
         ]
     },
     {
         city: "curitiba",
-        address: 'Al. Dr. Muricy, 420, Centro - Curitiba - PR, 80010-120',
+        address: {
+            full_address: 'Al. Dr. Muricy, 420, Centro - Curitiba - PR, 80010-120',
+            coordinates: {
+                lat: -25.4335887, lng: -49.2715582
+            }
+        },
         names: {
-            short: "Muricy",
+            short: "Mu",
             long: 'Muricy'
         },
         img: {
@@ -344,6 +449,24 @@ export const buildings: Building[] = [
                 value: 991,
                 description: 'Postos de atendimento.'
             }
+        ],
+        model_operations: [
+            {
+                type: 'Cobrança',
+                title: 'Cobrança',
+                description: 'Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.'
+            },
+            {
+                type: 'CX',
+                title: 'Customer Experience (CX)',
+                description: 'A experiência do cliente está no centro de tudo o que fazemos. Nosso atendimento de CX é voltado para garantir um suporte ágil, empático e resolutivo em todos os pontos de contato com o consumidor, promovendo satisfação, fidelização e valor à marca.'
+            },
+            {
+                type: 'Treinamento',
+                title: 'Treinamento',
+                description: 'Na Concentrix, acreditamos que o sucesso começa com uma base sólida. É por isso que o setor de Treinamento é uma peça fundamental da nossa cultura e operação. Aqui é onde os nossos Game Changers iniciam sua trajetória, recebendo todo o conhecimento, suporte e inspiração necessários para transformar experiências e impulsionar resultados.'
+            }
+
         ]
     },
 ]

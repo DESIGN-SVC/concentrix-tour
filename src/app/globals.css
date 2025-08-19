@@ -41,7 +41,8 @@
     --animate-border-gradient: border-gradient 3s ease alternate infinite;
     --animate-slide-in-bottom: slide-in-bottom 0.5s
         cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    --animate-flip-in-ver-right: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    --animate-flip-in-ver-right: flip-in-ver-right 0.5s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
     @keyframes border-gradient {
         0% {
@@ -89,6 +90,15 @@
         margin: 0 auto;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+    }
+    .leaflet-popup-content {
+        margin: 0 !important;
+    }
+    .leaflet-popup-content-wrapper,
+    .leaflet-popup-tip {
+        background: #25e2cc !important;
+        width: 13.75rem;
+
     }
 
     @media (width >= 48rem /* 768px */) {

@@ -4,19 +4,19 @@ import { Button } from "@/components";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
-type CarouselUnityListProps = {
+type UnityListProps = {
     title: string;
     link: string;
     background_img: StaticImageData;
     className?:string
 };
 
-export const CarouselUnityList = ({
+export const UnityList = ({
     title,
     link,
     background_img,
     className
-}: CarouselUnityListProps) => (
+}: UnityListProps) => (
     <li
         className={cx(
             "w-full max-w-[18.563rem] p-8 flex-none h-[23.25rem]",

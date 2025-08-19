@@ -17,6 +17,7 @@ const tw = cva(
         variants: {
             appearance: {
                 primary: ["text-white", "after:bg-white"],
+                secondary:['!text-blue-900']
             },
         },
         defaultVariants: {
