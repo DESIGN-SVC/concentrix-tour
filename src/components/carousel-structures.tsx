@@ -1,16 +1,16 @@
 "use client";
 
 import { Carousel } from "@/components";
-import { Building } from "@/lib/data";
 import { cx } from "cva";
-import { useRef, useState } from "react";
+import { PropsWithChildren, useRef, useState } from "react";
 
 type CarouselStructuresProps = {
-    listStructures: Building[];
-};
+    classNameRoot?: string;
+} & PropsWithChildren;
 
 export const CarouselStructures = ({
-    listStructures,
+    children,
+    classNameRoot,
 }: CarouselStructuresProps) => {
     const carouselRef = useRef<HTMLUListElement>(null);
     const [scrollPosition, setScrollPosition] =
@@ -57,26 +57,8 @@ export const CarouselStructures = ({
         carouselRef.current.scrollLeft = newScrollLeft;
     };
     return (
-        <div className="space-y-6">
-            <Carousel.Root ref={carouselRef}>
-                {listStructures.map(
-                    (
-                        { names: { short }, img: { building_facade }, city },
-                        index
-                    ) => (
-                        <Carousel.UnityList
-                            key={index}
-                            link={`/location/${city}?building=${short}`}
-                            title={short}
-                            background_img={building_facade}
-                            className={cx({
-                                "ml-8 lg:ml-14": index === 0,
-                                "mr-8 lg:mr-14": index === listStructures.length - 1,
-                            })}
-                        />
-                    )
-                )}
-            </Carousel.Root>
+        <div className={cx("space-y-6", classNameRoot)}>
+            <Carousel.Root ref={carouselRef}>{children}</Carousel.Root>
 
             <div className="w-full flex items-center gap-4 justify-center">
                 <Carousel.BtnScroll

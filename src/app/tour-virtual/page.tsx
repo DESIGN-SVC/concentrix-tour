@@ -1,7 +1,8 @@
+import { Carousel, CarouselStructures } from "@/components";
 import { findBuildings } from "../hooks/findBuildings";
 
 import { TalentAttraction } from "./talent-attraction";
-import { CarouselStructures } from "./carousel-structures";
+
 import { cx } from "cva";
 
 export default async function TourVirtual() {
@@ -50,7 +51,31 @@ export default async function TourVirtual() {
                                 presente.
                             </p>
                         </header>
-                        <CarouselStructures listStructures={listStructures} />
+                        <CarouselStructures>
+                            {listStructures.map(
+                                (
+                                    {
+                                        names: { short },
+                                        img: { building_facade },
+                                        city,
+                                    },
+                                    index
+                                ) => (
+                                    <Carousel.UnityList
+                                        key={index}
+                                        link={`/location/${city}?building=${short}`}
+                                        title={short}
+                                        background_img={building_facade}
+                                        className={cx({
+                                            "ml-8 lg:ml-14": index === 0,
+                                            "mr-8 lg:mr-14":
+                                                index ===
+                                                listStructures.length - 1,
+                                        })}
+                                    />
+                                )
+                            )}
+                        </CarouselStructures>
                     </aside>
                 </div>
             </section>

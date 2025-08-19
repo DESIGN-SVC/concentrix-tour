@@ -7,19 +7,20 @@ import { Images360 } from "./images-360";
 import { PhotosEnvironments } from "./photos-environments";
 import { Operations } from "./operations";
 
-import { ServerPage } from "./maps/server";
+import { Maps } from "./maps/maps";
+import { Carousel } from "./carousel";
 
 interface LocationPageProps {
-    params: { type: string };
-    searchParams: { building: string };
+    params: Promise<{ type: string }>;
+    searchParams: Promise<{ building: string }>;
 }
 
 export default async function LocationPage({
     params,
     searchParams,
 }: LocationPageProps) {
-    const { type } = params;
-    const { building } = searchParams;
+    const { type } = await params;
+    const { building } = await searchParams;
 
     const location = (await findBuildings({ building, city: type })).at(0);
 
@@ -49,7 +50,8 @@ export default async function LocationPage({
             />
             <Operations model_operations={location.model_operations} />
             <Images360 pictures_360={location.img.pictures_360} />
-            <ServerPage building={building} />
+            <Maps building={building} />
+            <Carousel />
         </main>
     );
 }
