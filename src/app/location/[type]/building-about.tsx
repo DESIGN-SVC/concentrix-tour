@@ -1,4 +1,3 @@
-
 import { Counter } from "@/utils";
 import { cx } from "cva";
 
@@ -16,11 +15,13 @@ export const BuildingAbout = ({
     values,
 }: BuildingAboutProps) => (
     <section
-    id={`about-${title}`}
+        id={`about-${title}`}
         className={cx(
             "w-full py-20 pb-14",
             "bg-white",
-            "lg:pt-[9.25rem] lg:pb-[6.25rem]"
+            "duration-300 ease-in",
+            "lg:pt-[9.25rem] lg:pb-[6.25rem]",
+            "dark:bg-gray-900"
         )}
     >
         <div
@@ -35,12 +36,21 @@ export const BuildingAbout = ({
                     className={cx(
                         "font-semibold text-[2rem]/[2.4rem] text-blue-900",
                         "w-full max-w-80",
-                        "lg:text-[2.5rem]/[3rem]"
+                        "lg:text-[2.5rem]/[3rem]",
+                        "duration-300 ease-in",
+                        "dark:text-white"
                     )}
                 >
                     {title}
                 </h2>
-                <p className={cx("text-gray-700", "lg:max-w-96")}>
+                <p
+                    className={cx(
+                        "text-gray-700",
+                        "lg:max-w-96",
+                        "duration-300 ease-in",
+                        "dark:text-gray-400"
+                    )}
+                >
                     {description}
                 </p>
             </header>
@@ -60,8 +70,7 @@ export const BuildingAbout = ({
                                     index === 0,
                                 "bg-seafoam-teal-30 text-blue-900 row-start-2":
                                     index === 1,
-                                "bg-jade text-blue-50 row-start-2":
-                                    index === 2,
+                                "bg-jade text-blue-50 row-start-2": index === 2,
                             }
                         )}
                     >

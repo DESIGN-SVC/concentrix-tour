@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Moon, Sun } from "@/icons";
 import { cx } from "cva";
@@ -6,9 +6,12 @@ import { cx } from "cva";
 export const ToggleSwitch = () => {
     const handleToggleDark = () => {
         const html = document.querySelector("html");
+
         if (html?.classList.contains("dark")) {
+            document.cookie = "theme=light; path=/; max-age=31536000";
             return html?.classList.remove("dark");
         }
+        document.cookie = "theme=dark; path=/; max-age=31536000";
         return html?.classList.add("dark");
     };
     return (

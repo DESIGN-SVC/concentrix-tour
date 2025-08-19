@@ -15,7 +15,12 @@ export const Operations = ({ model_operations }: OperationsProps) => {
     return (
         <section
             id="operations"
-            className={cx("bg-blue-900 rounded-t-4xl", "w-full py-14")}
+            className={cx(
+                "bg-blue-900 rounded-t-4xl",
+                "w-full py-14",
+                "duration-300 ease-in",
+                "dark:bg-gray-800"
+            )}
         >
             <div className="container space-y-14.5">
                 <ModelOperations model_operations={model_operations} />

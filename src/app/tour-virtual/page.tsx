@@ -5,6 +5,7 @@ import { TalentAttraction } from "./talent-attraction";
 
 import { cx } from "cva";
 
+
 export default async function TourVirtual() {
     const listStructures = await findBuildings({});
 

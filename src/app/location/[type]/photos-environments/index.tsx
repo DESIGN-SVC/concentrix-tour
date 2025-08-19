@@ -13,7 +13,16 @@ export const PhotosEnvironments = ({
 }: PhotosEnvironments) => {
     return (
         <>
-            <section id="photos_environments" className={cx("bg-white", "w-full py-14", "lg:py-24")}>
+            <section
+                id="photos_environments"
+                className={cx(
+                    "bg-white",
+                    "w-full py-14",
+                    "duration-300 ease-in",
+                    "lg:py-24",
+                    'dark:bg-gray-900'
+                )}
+            >
                 <article
                     className={cx(
                         "container",
@@ -24,7 +33,9 @@ export const PhotosEnvironments = ({
                     <h2
                         className={cx(
                             "font-semibold text-[2rem]/[2.4rem] text-blue-900",
-                            "lg:text-[2.5rem]/[3rem]"
+                            "duration-300 ease-in",
+                            "lg:text-[2.5rem]/[3rem]",
+                            'dark:text-white'
                         )}
                     >
                         Ambientes

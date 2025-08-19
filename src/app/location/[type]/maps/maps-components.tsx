@@ -46,6 +46,7 @@ export default function MapsComponents({ addresses }: MapsProps) {
                 width: "100%",
                 height: "478px",
             }}
+            className="z-0"
         >
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

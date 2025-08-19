@@ -44,22 +44,20 @@ export default async function locationFindOnePage({
     const listBuildings = locationFindAll.flatMap((el) => el.names.short);
 
     return (
-        <main className="flex-1 w-full" key={locationFindOne.names.short}>
-            <div className="relative">
-                <Address
-                    background={locationFindOne.img.building_facade}
-                    address={locationFindOne?.address.full_address}
-                    city={locationFindOne.city}
-                    title={locationFindOne.names.long}
-                    listBuildings={listBuildings}
-                />
-                <Navigation
-                    link_info={`#about-${locationFindOne.text.title}`}
-                    link_image="#photos_environments"
-                    link_operation="#operations"
-                    link_360="#images-360"
-                />
-            </div>
+        <main className="flex-1 w-full dark:bg-gray-900 duration-300 ease-in" key={locationFindOne.names.short}>
+            <Address
+                background={locationFindOne.img.building_facade}
+                address={locationFindOne?.address.full_address}
+                city={locationFindOne.city}
+                title={locationFindOne.names.long}
+                listBuildings={listBuildings}
+            />
+            <Navigation
+                link_info={`#about-${locationFindOne.text.title}`}
+                link_image="#photos_environments"
+                link_operation="#operations"
+                link_360="#images-360"
+            />
 
             <BuildingAbout
                 title={locationFindOne.text.title}
@@ -71,12 +69,14 @@ export default async function locationFindOnePage({
             />
             <Operations model_operations={locationFindOne.model_operations} />
             <Images360 pictures_360={locationFindOne.img.pictures_360} />
-            <section className="bg-white w-full">
+            <section className="bg-white w-full dark:bg-gray-900 duration-300 ease-in">
                 <div className="container py-14 space-y-8">
                     <h2
                         className={cx(
                             "text-blue-900 font-semibold text-[2rem]/[2.4rem]",
-                            "lg:text-[2.5rem]/[3rem]"
+                            'duration-300 ease-in',
+                            "lg:text-[2.5rem]/[3rem]",
+                            'dark:text-white'
                         )}
                     >
                         Localização
@@ -84,12 +84,14 @@ export default async function locationFindOnePage({
                     <Maps addresses={addresses} />
                 </div>
             </section>
-            <section className="bg-white w-full">
+            <section className="bg-white w-full dark:bg-gray-900 duration-300 ease-in">
                 <div className="container py-14 space-y-8">
                     <h2
                         className={cx(
                             "text-blue-900 font-semibold text-[2rem]/[2.4rem]",
-                            "lg:text-[2.5rem]/[3rem]"
+                            'duration-300 ease-in',
+                            "lg:text-[2.5rem]/[3rem]",
+                            'dark:text-white'
                         )}
                     >
                         Continue explorando

@@ -26,7 +26,8 @@ export const Address = ({
             "after:absolute after:top-0 after:left-0 after:-z-10",
             "after:h-full after:w-full",
             "after:duration-300 after:ease-in",
-            "after:bg-[linear-gradient(0deg,rgba(0,61,91,0.70)_0%,rgba(0,61,91,0.70)_100%),linear-gradient(180deg,rgba(31,33,35,0.00)_-3.32%,#1F2123_88.36%)]"
+            "after:bg-[linear-gradient(0deg,rgba(0,61,91,0.70)_0%,rgba(0,61,91,0.70)_100%),linear-gradient(180deg,rgba(31,33,35,0.00)_-3.32%,#1F2123_88.36%)]",
+            'dark:after:bg-[linear-gradient(180deg,rgba(31,33,35,0.65)_-3.32%,#1F2123_88.36%)]'
         )}
     >
         <Image

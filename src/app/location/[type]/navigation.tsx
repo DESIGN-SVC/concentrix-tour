@@ -38,15 +38,20 @@ export const Navigation = ({
         },
     ];
     return (
-        <nav className={cx("w-full max-w-[65rem] mx-auto relative")}>
+        <nav
+            className={cx(
+                "container",
+                "sticky top-14 z-40 left-4 -translate-y-10",
+                "duration-300 ease-in"
+            )}
+        >
             <div
                 className={cx(
-                    "py-3 px-6 w-[calc(100%_-2rem)]",
-                    "border rounded-3xl border-gray-600 bg-white",
+                    "py-3 px-6 mx-auto w-full",
+                    "border rounded-3xl border-gray-600 bg-white shadow-lg",
                     "flex items-center justify-between",
                     "duration-300 ease-in",
-                    "absolute -top-[50px] z-50 left-4",
-                    "lg:left-0 lg:w-full lg:-top-6"
+                    "dark:bg-gray-800"
                 )}
             >
                 {listLinks.map(({ text, icon, link }) => (
@@ -60,11 +65,32 @@ export const Navigation = ({
                             "lg:flex-row lg:gap-3"
                         )}
                     >
-                        <Slot className="text-jade">{icon}</Slot>
-                        <p className="text-xs font-semibold text-blue-900 lg:text-lg">
+                        <Slot
+                            className={cx(
+                                "text-jade",
+                                "duration-300 ease-in",
+                                "dark:text-white"
+                            )}
+                        >
+                            {icon}
+                        </Slot>
+                        <p
+                            className={cx(
+                                "text-xs font-semibold text-blue-900",
+                                "duration-300 ease-in",
+                                "lg:text-lg",
+                                "dark:text-white"
+                            )}
+                        >
                             {text}
                         </p>
-                        <Chevron className="size-4 max-lg:hidden" />
+                        <Chevron
+                            className={cx(
+                                "size-4 max-lg:hidden",
+                                "duration-300 ease-in",
+                                "dark:text-white"
+                            )}
+                        />
                     </a>
                 ))}
             </div>
