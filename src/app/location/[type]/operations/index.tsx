@@ -22,7 +22,7 @@ export const Operations = ({ model_operations }: OperationsProps) => {
                 "dark:bg-gray-800"
             )}
         >
-            <div className="container space-y-14.5">
+            <div className="container space-y-14.5" data-animation="up-2">
                 <ModelOperations model_operations={model_operations} />
                 <hr className="text-gray-700" />
                 <article className="space-y-12">

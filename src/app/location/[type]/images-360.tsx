@@ -34,7 +34,7 @@ export const Images360 = ({ pictures_360 }: Images360Props) => {
                 "dark:bg-gray-800"
             )}
         >
-            <div className={cx("flex flex-col gap-8", "container")}>
+            <div className={cx("flex flex-col gap-8", "container")} data-animation="up-3">
                 <header
                     className={cx(
                         "flex flex-col gap-2 items-center",

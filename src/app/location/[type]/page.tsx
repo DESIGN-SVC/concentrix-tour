@@ -1,4 +1,4 @@
-import { findBuildings } from "@/app/hooks/findBuildings";
+import { findBuildings } from "@/hooks/findBuildings";
 
 import { redirect } from "next/navigation";
 import { Navigation } from "./navigation";
@@ -11,6 +11,7 @@ import { Address } from "./address";
 import { cx } from "cva";
 import { Maps } from "./maps";
 import { Carousel, CarouselStructures } from "@/components";
+import { AnimationObserver } from "@/components/animation-observer";
 
 interface locationFindOnePageProps {
     params: Promise<{ type: string }>;
@@ -44,7 +45,10 @@ export default async function locationFindOnePage({
     const listBuildings = locationFindAll.flatMap((el) => el.names.short);
 
     return (
-        <main className="flex-1 w-full dark:bg-gray-900 duration-300 ease-in" key={locationFindOne.names.short}>
+        <main
+            className="flex-1 w-full dark:bg-gray-900 duration-300 ease-in"
+            key={locationFindOne.names.short}
+        >
             <Address
                 background={locationFindOne.img.building_facade}
                 address={locationFindOne?.address.full_address}
@@ -69,14 +73,14 @@ export default async function locationFindOnePage({
             />
             <Operations model_operations={locationFindOne.model_operations} />
             <Images360 pictures_360={locationFindOne.img.pictures_360} />
-            <section className="bg-white w-full dark:bg-gray-900 duration-300 ease-in">
+            <section className="bg-white w-full dark:bg-gray-900 duration-300 ease-in" data-animation="up-2">
                 <div className="container py-14 space-y-8">
                     <h2
                         className={cx(
                             "text-blue-900 font-semibold text-[2rem]/[2.4rem]",
-                            'duration-300 ease-in',
+                            "duration-300 ease-in",
                             "lg:text-[2.5rem]/[3rem]",
-                            'dark:text-white'
+                            "dark:text-white"
                         )}
                     >
                         Localização
@@ -84,14 +88,14 @@ export default async function locationFindOnePage({
                     <Maps addresses={addresses} />
                 </div>
             </section>
-            <section className="bg-white w-full dark:bg-gray-900 duration-300 ease-in">
+            <section className="bg-white w-full dark:bg-gray-900 duration-300 ease-in" data-animation="up-3">
                 <div className="container py-14 space-y-8">
                     <h2
                         className={cx(
                             "text-blue-900 font-semibold text-[2rem]/[2.4rem]",
-                            'duration-300 ease-in',
+                            "duration-300 ease-in",
                             "lg:text-[2.5rem]/[3rem]",
-                            'dark:text-white'
+                            "dark:text-white"
                         )}
                     >
                         Continue explorando
@@ -117,6 +121,7 @@ export default async function locationFindOnePage({
                     </CarouselStructures>
                 </div>
             </section>
+            <AnimationObserver />
         </main>
     );
 }

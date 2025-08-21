@@ -1,27 +1,32 @@
 import { Carousel, CarouselStructures } from "@/components";
-import { findBuildings } from "../hooks/findBuildings";
+import { findBuildings } from "../../hooks/findBuildings";
 
 import { TalentAttraction } from "./talent-attraction";
 
 import { cx } from "cva";
-
+import { PresentationVideo } from "./presentation-video";
+import { ExpandedVideoModal } from "./expanded-video";
+import { AnimationObserver } from "@/components/animation-observer";
 
 export default async function TourVirtual() {
     const listStructures = await findBuildings({});
 
     return (
-        <div className="flex-1">
+        <div
+            className={cx(
+                "flex-1",
+                "bg-white",
+                "duration-300 ease-in",
+                "dark:bg-gray-900"
+            )}
+        >
+            <PresentationVideo />
             <TalentAttraction />
             <section
                 id="carousel-structures"
-                className={cx(
-                    "w-full pb-[4.5rem]",
-                    "bg-white",
-                    "duration-300 ease-in",
-                    "dark:bg-gray-900"
-                )}
+                className={cx("w-full pb-[4.5rem]")}
             >
-                <div className="container">
+                <div className="container" data-animation="up-3">
                     <aside
                         className={cx(
                             "py-6",
@@ -80,6 +85,8 @@ export default async function TourVirtual() {
                     </aside>
                 </div>
             </section>
+            <ExpandedVideoModal/>
+            <AnimationObserver/>
         </div>
     );
 }

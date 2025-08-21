@@ -27,7 +27,7 @@ export const Address = ({
             "after:h-full after:w-full",
             "after:duration-300 after:ease-in",
             "after:bg-[linear-gradient(0deg,rgba(0,61,91,0.70)_0%,rgba(0,61,91,0.70)_100%),linear-gradient(180deg,rgba(31,33,35,0.00)_-3.32%,#1F2123_88.36%)]",
-            'dark:after:bg-[linear-gradient(180deg,rgba(31,33,35,0.65)_-3.32%,#1F2123_88.36%)]'
+            "dark:after:bg-[linear-gradient(180deg,rgba(31,33,35,0.65)_-3.32%,#1F2123_88.36%)]"
         )}
     >
         <Image
@@ -36,7 +36,11 @@ export const Address = ({
             alt={`imagem da fachada do prédio ${title}`}
             className="absolute left-0 object-cover top-0 w-full h-full -z-10"
         />
-        <div className={cx("container pt-11 pb-24", "lg:py-[4.5rem]")}>
+
+        <div
+            className={cx("container pt-11 pb-24", "lg:py-[4.5rem]")}
+            data-animation="up"
+        >
             <div className="w-full flex items-center justify-between">
                 <AddressButtonRouter />
                 <Dropdown.Root>
@@ -45,7 +49,6 @@ export const Address = ({
                             <Link
                                 appearance={"secondary"}
                                 href={`/location/${city}?building=${building}`}
-                                
                             >
                                 <span className="capitalize">{city}</span>-{" "}
                                 {building}

@@ -15,6 +15,7 @@ export const AboutUs = () => (
     >
         <nav className="container pt-8 pb-[4.5rem] space-y-8 lg:space-y-12">
             <h2
+                data-animation="up-2"
                 className={cx(
                     "font-semibold text-2xl text-blue-900",
                     " duration-300 ease-in",
@@ -23,7 +24,7 @@ export const AboutUs = () => (
             >
                 Saiba mais sobre nós
             </h2>
-            <ul className="flex flex-col gap-4 lg:flex-row lg:flex-wrap">
+            <ul data-animation="up-2" className="flex flex-col gap-4 lg:flex-row lg:flex-wrap">
                 {list.map(({ title, description, icon, href }, index) => (
                     <li
                         key={title}
@@ -87,16 +88,16 @@ export const AboutUs = () => (
                                 <div
                                     className={cx(
                                         "relative z-0",
-                                        'flex items-center justify-center',
+                                        "flex items-center justify-center",
                                         "w-full max-w-[17.5rem] mx-auto",
-                                        'lg:mx-0 lg:max-w-[22.625rem]'
+                                        "lg:mx-0 lg:max-w-[22.625rem]"
                                     )}
                                 >
                                     <SVGRectangle
                                         className={cx(
                                             "w-full max-w-[17.5rem]",
                                             "absolute -z-10",
-                                            'lg:max-w-[22.625rem]'
+                                            "lg:max-w-[22.625rem]"
                                         )}
                                     />
                                     <Image

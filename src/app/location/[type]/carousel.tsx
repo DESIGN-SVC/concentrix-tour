@@ -1,4 +1,4 @@
-import { findBuildings } from "@/app/hooks/findBuildings";
+import { findBuildings } from "@/hooks/findBuildings";
 import { CarouselStructures } from "@/components";
 import { Carousel as CarouselComponent } from "@/components";
 

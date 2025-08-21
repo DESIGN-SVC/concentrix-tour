@@ -25,6 +25,7 @@ export const BuildingAbout = ({
         )}
     >
         <div
+            data-animation="up-3"
             className={cx(
                 "container",
                 "flex flex-col gap-12",

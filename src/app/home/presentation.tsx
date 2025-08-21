@@ -58,13 +58,16 @@ export const Presentation = () => (
                     ])}
                 >
                     <Image
+                        data-animation="up"
                         src={concentrix}
                         alt="Concentrix tour"
                         className="w-full max-w-3xs lg:max-w-[31.563rem]"
                         priority={true}
                     />
-                    <Button size={"medium"} asChild>
-                        <Link href={'/tour-virtual'}>Comece seu Tour <Chevron/></Link>
+                    <Button size={"medium"} asChild data-animation="up">
+                        <Link href={"/tour-virtual"}>
+                            Comece seu Tour <Chevron />
+                        </Link>
                     </Button>
                 </div>
             </div>

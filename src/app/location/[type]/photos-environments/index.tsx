@@ -24,6 +24,7 @@ export const PhotosEnvironments = ({
                 )}
             >
                 <article
+                data-animation="up"
                     className={cx(
                         "container",
                         "flex flex-col gap-6",

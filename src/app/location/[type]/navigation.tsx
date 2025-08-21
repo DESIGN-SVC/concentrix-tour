@@ -39,6 +39,7 @@ export const Navigation = ({
     ];
     return (
         <nav
+        data-animation="up-2"
             className={cx(
                 "container",
                 "sticky top-14 z-40 left-4 -translate-y-10",

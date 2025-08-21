@@ -13,6 +13,7 @@ export const TalentAttraction = () => {
 
     return (
         <section
+        id="talent-attraction"
             className={cx(
                 "w-full py-14",
                 "bg-white",
@@ -22,7 +23,7 @@ export const TalentAttraction = () => {
             )}
         >
             <div className={cx("container", "grid", "lg:grid-cols-2 ")}>
-                <header className="flex flex-col gap-8 lg:justify-center">
+                <header className="flex flex-col gap-8 lg:justify-center" data-animation="up">
                     <h2
                         className={cx(
                             "font-semibold text-blue-900 text-[2rem]/[2.375rem]",
@@ -50,7 +51,7 @@ export const TalentAttraction = () => {
                         ))}
                     </ul>
                 </header>
-                <article className="mt-12 lg:col-start-1 lg:row-start-2 lg:mt-0 lg:mb-auto">
+                <article className="mt-12 lg:col-start-1 lg:row-start-2 lg:mt-0 lg:mb-auto" data-animation="up-2">
                     <h5
                         className={cx(
                             "font-semibold text-gray-700 text-2xl",
@@ -87,6 +88,7 @@ export const TalentAttraction = () => {
                     </Button>
                 </article>
                 <ul
+                data-animation="up-3"
                     className={cx(
                         "h-[500px] w-full max-w-[21.25rem] mx-auto mt-6",
                         "overflow-hidden relative",
