@@ -16,9 +16,10 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
 
-    // Adicionar classe dark no html
     if (savedTheme === "dark") {
       document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
