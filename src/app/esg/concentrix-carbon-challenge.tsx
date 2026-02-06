@@ -6,9 +6,12 @@ import { Button } from "@/components/button";
 
 export function ConcentrixCarbonChallenge() {
   return (
-    <section className="bg-blue-900 overflow-hidden relative w-full py-25 -mt-82 rounded-t-[48px]">
+    <section className="bg-blue-900 overflow-hidden relative w-full py-14 md:py-25 -mt-90 min-[864px]:-mt-82 rounded-t-[48px]">
       <div className="container flex z-20 flex-col gap-10">
-        <div className="flex flex-col z-20 gap-10 max-w-110 xl:max-w-148">
+        <div
+          className="flex flex-col z-20 gap-10 max-w-110 xl:max-w-148"
+          data-animation="up"
+        >
           <img
             className="w-87"
             src={carbonChallengeImg.src}
@@ -34,11 +37,14 @@ export function ConcentrixCarbonChallenge() {
             </span>
           </div>
         </div>
-        <div className="w-full pt-10 z-20 border-t border-t-seafoam-teal-30 flex flex-col gap-12">
+        <div
+          className="w-full pt-10 z-20 border-t border-t-seafoam-teal-30 flex flex-col gap-12"
+          data-animation="up-3"
+        >
           <h4 className="text-white leading-[120%] font-semibold text-[2rem]">
             Veja as categorias e ações que você pode realizar:
           </h4>
-          <ul className="flex justify-between gap-5">
+          <ul className="grid grid-cols-2 md:flex justify-between gap-5">
             {actionItens.map((item, index) => (
               <ActionItem {...item} key={index} />
             ))}
@@ -54,7 +60,7 @@ export function ConcentrixCarbonChallenge() {
         </div>
       </div>
       <img
-        className="absolute top-16 z-10 w-[600px] h-[653px] xl:w-[656px] xl:h-[723px] -right-14"
+        className="absolute hidden md:flex top-16 z-10 w-[600px] h-[653px] xl:w-[656px] xl:h-[723px] -right-14"
         src={handPlant.src}
         alt=""
       />

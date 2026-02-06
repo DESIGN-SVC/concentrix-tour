@@ -27,7 +27,7 @@ export const AboutUs = () => (
         data-animation="up-2"
         className="flex flex-col gap-4 lg:flex-row lg:flex-wrap"
       >
-        {list.map(({ title, description, icon, href }, index) => (
+        {list.map(({ title, description, icon, href, internLink }, index) => (
           <li
             key={title}
             className={cx(
@@ -111,7 +111,11 @@ export const AboutUs = () => (
               </>
             )}
             {index !== 0 && (
-              <a href={href} target="_blank" rel="noopener noreferrer">
+              <a
+                href={href}
+                target={internLink ? "_self" : "_blank"}
+                rel={internLink ? undefined : "noopener noreferrer"}
+              >
                 <header className="flex justify-between items-center gap-4">
                   <span
                     className={cx(
@@ -181,6 +185,7 @@ const list = [
       "Avalie nossa empresa e nos ajude a crescer! Sua opinião faz a diferença e contribui para a contratação de novos Game-Changers.",
     href: "https://www.glassdoor.com.br/slink.htm?key=vOhV1",
     icon: "",
+    internLink: false,
   },
   {
     title: "Benefícios",
@@ -188,23 +193,27 @@ const list = [
       "Confira tudo que oferecemos para o seu desenvolvimento e bem-estar.",
     href: "https://concentrixbrasil.benefithub.com/welcome/register/I4NDP5",
     icon: <User />,
+    internLink: false,
   },
   {
     title: "Buzzhub",
     description: "Acesse informações gerais, links e novidades da Concentrix",
     href: "https://mycnx.concentrix.com/sites/brazil/SitePages/Home.aspx",
     icon: <User />,
+    internLink: false,
   },
   {
     title: "HSE",
     description: "Avalie nossa empresa e ajude a contratar novos Game-Changers",
     href: "#",
     icon: <User />,
+    internLink: false,
   },
   {
     title: "ESG",
     description: "Acesse informações gerais, links e novidades da Concentrix",
-    href: "#",
+    href: "/esg",
     icon: <User />,
+    internLink: true,
   },
 ] as const;
