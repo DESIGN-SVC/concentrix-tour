@@ -7,86 +7,74 @@ import { cx } from "cva";
 import { PresentationVideo } from "./presentation-video";
 import { ExpandedVideoModal } from "./expanded-video";
 import { AnimationObserver } from "@/components/animation-observer";
+import { ScrollToTopButton } from "@/components/scroll-to-top";
 
 export default async function TourVirtual() {
-    const listStructures = await findBuildings({});
+  const listStructures = await findBuildings({});
 
-    return (
-        <div
+  return (
+    <div
+      className={cx(
+        "flex-1",
+        "bg-white",
+        "duration-300 ease-in",
+        "dark:bg-gray-900",
+        "relative",
+      )}
+    >
+      <PresentationVideo />
+      <TalentAttraction />
+      <section id="carousel-structures" className={cx("w-full pb-[4.5rem]")}>
+        <div className="container" data-animation="up-3">
+          <aside
             className={cx(
-                "flex-1",
-                "bg-white",
-                "duration-300 ease-in",
-                "dark:bg-gray-900"
+              "py-6",
+              "bg-blue-900 rounded-3xl",
+              "flex flex-col gap-12",
+              "lg:py-12",
+              "dark:bg-gray-800",
             )}
-        >
-            <PresentationVideo />
-            <TalentAttraction />
-            <section
-                id="carousel-structures"
-                className={cx("w-full pb-[4.5rem]")}
-            >
-                <div className="container" data-animation="up-3">
-                    <aside
-                        className={cx(
-                            "py-6",
-                            "bg-blue-900 rounded-3xl",
-                            "flex flex-col gap-12",
-                            "lg:py-12",
-                            "dark:bg-gray-800"
-                        )}
-                    >
-                        <header className="space-y-2 px-6 lg:px-14">
-                            <h2
-                                className={cx(
-                                    "text-white font-semibold text-[2rem]/[2.4rem]",
-                                    "lg:text-[2.5rem]/[3rem]"
-                                )}
-                            >
-                                Nossas estruturas
-                            </h2>
-                            <p
-                                className={cx(
-                                    "text-white text-sm",
-                                    "lg:max-w-[29rem]"
-                                )}
-                            >
-                                Passeie por nossas estruturas e descubra como
-                                cada espaço foi pensado para conectar pessoas,
-                                valorizar nossos colaboradores e transformar o
-                                presente.
-                            </p>
-                        </header>
-                        <CarouselStructures>
-                            {listStructures.map(
-                                (
-                                    {
-                                        names: { short },
-                                        img: { building_facade },
-                                        city,
-                                    },
-                                    index
-                                ) => (
-                                    <Carousel.UnityList
-                                        key={index}
-                                        link={`/location/${city}?building=${short}`}
-                                        title={short}
-                                        background_img={building_facade}
-                                        className={cx({
-                                            "ml-8 lg:ml-14": index === 0,
-                                            "mr-8 lg:mr-14":
-                                                index ===
-                                                listStructures.length - 1,
-                                        })}
-                                    />
-                                )
-                            )}
-                        </CarouselStructures>
-                    </aside>
-                </div>
-            </section>
-            <ExpandedVideoModal/>
-            <AnimationObserver/>
+          >
+            <header className="space-y-2 px-6 lg:px-14">
+              <h2
+                className={cx(
+                  "text-white font-semibold text-[2rem]/[2.4rem]",
+                  "lg:text-[2.5rem]/[3rem]",
+                )}
+              >
+                Nossas estruturas
+              </h2>
+              <p className={cx("text-white text-sm", "lg:max-w-[29rem]")}>
+                Passeie por nossas estruturas e descubra como cada espaço foi
+                pensado para conectar pessoas, valorizar nossos colaboradores e
+                transformar o presente.
+              </p>
+            </header>
+            <CarouselStructures>
+              {listStructures.map(
+                (
+                  { names: { short }, img: { building_facade }, city },
+                  index,
+                ) => (
+                  <Carousel.UnityList
+                    key={index}
+                    link={`/location/${city}?building=${short}`}
+                    title={short}
+                    background_img={building_facade}
+                    className={cx({
+                      "ml-8 lg:ml-14": index === 0,
+                      "mr-8 lg:mr-14": index === listStructures.length - 1,
+                    })}
+                  />
+                ),
+              )}
+            </CarouselStructures>
+          </aside>
         </div>
-    );
+      </section>
+      <ExpandedVideoModal />
+      <AnimationObserver />
+      <ScrollToTopButton />
+    </div>
+  );
 }

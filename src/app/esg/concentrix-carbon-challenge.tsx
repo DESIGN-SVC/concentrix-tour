@@ -30,9 +30,9 @@ export function ConcentrixCarbonChallenge() {
           </article>
           <div className="bg-seafoam-teal-30 rounded-[40px] p-7.5">
             <span className="text-blue-900 font-bold text-lg leading-[140%]">
-              Motive-se e participe do premio que temos para você: <br />{" "}
+              Motive-se e participe do prêmio que temos para você: <br />{" "}
               <span className="text-xl leading-[130%] font-medium">
-                Lojas americas giftcards
+                Lojas Americanas giftcards
               </span>
             </span>
           </div>

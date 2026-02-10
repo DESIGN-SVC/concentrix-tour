@@ -5,10 +5,11 @@ import { ResourceGroups } from "@/app/esg/resource-groups";
 import { GRG } from "./grg";
 import { SocialActions } from "./social-actions";
 import { AnimationObserver } from "@/components/animation-observer";
+import { ScrollToTopButton } from "@/components/scroll-to-top";
 
 export default async function ESG() {
   return (
-    <>
+    <div className="relative">
       <header className="relative z-20">
         <img
           alt="Campo de grama aberto"
@@ -32,6 +33,7 @@ export default async function ESG() {
       <ResourceGroups />
       <GRG />
       <AnimationObserver />
-    </>
+      <ScrollToTopButton />
+    </div>
   );
 }

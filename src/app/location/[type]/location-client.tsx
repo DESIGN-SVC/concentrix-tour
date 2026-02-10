@@ -14,6 +14,7 @@ import { Carousel, CarouselStructures } from "@/components";
 import { AnimationObserver } from "@/components/animation-observer";
 import { useEffect, useState } from "react";
 import { Building } from "@/lib/data";
+import { ScrollToTopButton } from "@/components/scroll-to-top";
 
 interface LocationClientProps {
   city: string;
@@ -56,7 +57,7 @@ export function LocationClient({ city, allBuildings }: LocationClientProps) {
 
   return (
     <main
-      className="flex-1 w-full dark:bg-gray-900 duration-300 ease-in"
+      className="flex-1 w-full relative dark:bg-gray-900 duration-300 ease-in"
       key={locationFindOne.names.short}
     >
       <Address
@@ -135,6 +136,7 @@ export function LocationClient({ city, allBuildings }: LocationClientProps) {
         </div>
       </section>
       <AnimationObserver />
+      <ScrollToTopButton />
     </main>
   );
 }

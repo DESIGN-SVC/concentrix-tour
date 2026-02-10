@@ -11,7 +11,7 @@ export function SocialActions() {
       >
         <div className="py-10 md:py-25 h-fit grid flex-col gap-7">
           <h2 className="font-semibold text-blue-900 text-[2rem]/[2.375rem] lg:text-[2.5rem]/[3rem] dark:text-gray-200">
-            Ações sociais
+            Voluntariado
           </h2>
           <article className="max-w-[663px] duration-300 ease-in flex flex-col gap-7 text-gray-700 dark:text-white">
             <h5 className="text-blue-900 dark:text-white font-semibold text-xl lg:text-2xl">
@@ -39,7 +39,13 @@ export function SocialActions() {
             appearance={"secondary"}
             asChild
           >
-            <a href="#carousel-structures">Quero participar</a>
+            <a
+              href="https://forms.office.com/pages/responsepage.aspx?id=1lGeWYwvR0OOWR95WlGpjBzwDVF1AsNNsvDJQ1bRaSpUOFVTVlVXWjZTSkdXT0JSWDlJM1ZVSU1PVi4u&route=shorturl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Quero participar
+            </a>
           </Button>
         </div>
         <SocialActionsPhotos />
