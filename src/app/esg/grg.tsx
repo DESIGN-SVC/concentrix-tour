@@ -21,7 +21,7 @@ export function GRG() {
           afiliações profissionais de forma simples e rápida.
         </span>
         <div className="pb-12">
-          <VideoPlayer src="/video/esg-tutorial.mp4" />
+          <VideoPlayer src="/video/ESG-tutorial-trilha.mp4" />
         </div>
       </div>
     </section>

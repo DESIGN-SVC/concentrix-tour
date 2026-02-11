@@ -44,7 +44,7 @@ export function ResourceGroups() {
             alt=""
           />
           <div className="flex flex-col gap-5 md:gap-3">
-            <h2 className="text-[40px] sm:text-[48px] font-semibold text-gray-800 md:text-[56px] dark:text-gray-200">
+            <h2 className="text-[40px] font-semibold text-gray-800 dark:text-gray-200">
               Game-changers Resource Groups - GRG
             </h2>
             <p className="text-blue-900 dark:text-white leading-[120%] font-semibold text-[2rem]">
@@ -53,7 +53,7 @@ export function ResourceGroups() {
           </div>
         </div>
         <div className="bg-blue-900 dark:bg-gray-200 w-full h-px my-7.5 md:my-15" />
-        <div className="flex flex-col gap-7.5" data-animation="up-2">
+        <div className="flex flex-col gap-12" data-animation="up-2">
           <h4 className="text-blue-900 leading-[120%] font-semibold text-[2rem] dark:text-white">
             Conheça e participe de nossos grupos de afinidade
           </h4>
@@ -76,12 +76,12 @@ interface ResourceGroupItemProps {
 
 function ResourceGroupItem({ imageSrc, title, text }: ResourceGroupItemProps) {
   return (
-    <li className="flex flex-col gap-7">
+    <li className="flex flex-col gap-2.5">
       <img loading="lazy" className="size-22.5" src={imageSrc} alt="" />
       <h5 className="text-2xl text-blue-900 dark:text-white font-semibold">
         {title}
       </h5>
-      <p className="text-xs text-gray-700 dark:text-gray-200">{text}</p>
+      <p className="text-base text-gray-700 dark:text-gray-200">{text}</p>
     </li>
   );
 }

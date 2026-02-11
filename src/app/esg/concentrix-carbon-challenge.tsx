@@ -28,8 +28,8 @@ export function ConcentrixCarbonChallenge() {
               vida com baixo de teor de emissão de carbono por meio de um site.
             </p>
           </article>
-          <div className="bg-seafoam-teal-30 rounded-[40px] p-7.5">
-            <span className="text-blue-900 font-bold text-lg leading-[140%]">
+          <div className="bg-jade rounded-[40px] p-7.5">
+            <span className="text-white font-bold text-lg leading-[140%]">
               Motive-se e participe do prêmio que temos para você: <br />{" "}
               <span className="text-xl leading-[130%] font-medium">
                 Lojas Americanas giftcards
@@ -55,7 +55,13 @@ export function ConcentrixCarbonChallenge() {
             className="w-full font-semibold max-w-72 px-6 py-4"
             appearance={"secondary"}
           >
-            <a href="#carousel-structures">Acesse o Carbon Challange</a>
+            <a
+              href="https://carbonchallenge.concentrix.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Acesse o Carbon Challenge
+            </a>
           </Button>
         </div>
       </div>

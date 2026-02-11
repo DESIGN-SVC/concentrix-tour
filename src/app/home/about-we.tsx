@@ -40,12 +40,12 @@ export const AboutUs = () => (
               {
                 "bg-jade gap-8 lg:order-1 lg:flex-row-reverse lg:gap-14 lg:px-14 lg:justify-between":
                   index === 0,
-                "bg-blue-100 lg:max-w-[506px] dark:border-gray-700 dark:bg-gray-800":
+                "bg-blue-100 lg:max-w-[335px] dark:border-gray-700 dark:bg-gray-800":
                   index !== 0,
-                "lg:order-2": index === 1,
+                "lg:order-3": index === 1,
+                "lg:order-2": index === 4,
                 "lg:order-4": index === 2,
-                "lg:order-3": index === 3,
-                "lg:order-5": index === 4,
+                "lg:order-5": index === 3,
               },
             )}
           >
@@ -119,7 +119,7 @@ export const AboutUs = () => (
                 <header className="flex justify-between items-center gap-4">
                   <span
                     className={cx(
-                      "size-12",
+                      "size-14",
                       "flex items-center justify-center",
                       "rounded-full bg-blue-300",
                       "text-jade",
@@ -131,7 +131,7 @@ export const AboutUs = () => (
                   <h6
                     className={cx(
                       "ease-in duration-300",
-                      "text-lg font-semibold text-blue-900",
+                      "text-lg lg:text-2xl font-semibold text-blue-900",
                       "flex-1",
                       "dark:text-white",
                     )}
@@ -142,8 +142,8 @@ export const AboutUs = () => (
                 </header>
                 <p
                   className={cx(
-                    "ease-in duration-300",
-                    "text-sm text-gray-700",
+                    "ease-in duration-300 mt-3",
+                    "text-sm lg:text-base text-gray-700",
                     "lg:max-w-72",
                     "dark:text-gray-200",
                   )}
@@ -189,31 +189,120 @@ const list = [
   },
   {
     title: "Benefícios",
-    description:
-      "Confira tudo que oferecemos para o seu desenvolvimento e bem-estar.",
+    description: "Confira tudo que oferecemos para o seu bem-estar.",
     href: "https://concentrixbrasil.benefithub.com/welcome/register/I4NDP5",
-    icon: <User />,
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_2071_12641)">
+          <path
+            d="M16 27C16 27 3 20 3 11.75C3 9.95979 3.71116 8.2429 4.97703 6.97703C6.2429 5.71116 7.95979 5 9.75 5C12.5738 5 14.9925 6.53875 16 9C17.0075 6.53875 19.4262 5 22.25 5C24.0402 5 25.7571 5.71116 27.023 6.97703C28.2888 8.2429 29 9.95979 29 11.75C29 20 16 27 16 27Z"
+            stroke="#007380"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_2071_12641">
+            <rect width="32" height="32" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
     internLink: false,
   },
   {
     title: "Buzzhub",
-    description: "Acesse informações gerais, links e novidades da Concentrix",
+    description: "Acesse informações gerais, links e novidades da Concentrix.",
     href: "https://mycnx.concentrix.com/sites/brazil/SitePages/Home.aspx",
-    icon: <User />,
-    internLink: false,
-  },
-  {
-    title: "HSE",
-    description: "Avalie nossa empresa e ajude a contratar novos Game-Changers",
-    href: "#",
-    icon: <User />,
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_2071_12657)">
+          <path
+            d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
+            stroke="#007380"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11 16.0002C11 20.6827 12.6662 24.8652 15.285 27.6864C15.376 27.7854 15.4865 27.8643 15.6096 27.9184C15.7326 27.9724 15.8656 28.0003 16 28.0003C16.1344 28.0003 16.2674 27.9724 16.3904 27.9184C16.5135 27.8643 16.624 27.7854 16.715 27.6864C19.3338 24.8652 21 20.6827 21 16.0002C21 11.3177 19.3338 7.13516 16.715 4.31391C16.624 4.21496 16.5135 4.13597 16.3904 4.08193C16.2674 4.0279 16.1344 4 16 4C15.8656 4 15.7326 4.0279 15.6096 4.08193C15.4865 4.13597 15.376 4.21496 15.285 4.31391C12.6662 7.13516 11 11.3177 11 16.0002Z"
+            stroke="#007380"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M4.6825 12H27.3175"
+            stroke="#007380"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M4.6825 20H27.3175"
+            stroke="#007380"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_2071_12657">
+            <rect width="32" height="32" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
     internLink: false,
   },
   {
     title: "ESG",
-    description: "Acesse informações gerais, links e novidades da Concentrix",
+    description: "Junte-se a nós e seja um multiplicador do bem.",
     href: "/esg",
-    icon: <User />,
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_2071_12669)">
+          <path
+            d="M7.97626 24.0236C1.99001 14.0473 9.97626 4.07108 26.9313 5.06858C27.9288 22.0286 17.9525 30.0098 7.97626 24.0236Z"
+            stroke="#007380"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M20 12L5 27"
+            stroke="#007380"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_2071_12669">
+            <rect width="32" height="32" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
     internLink: true,
   },
 ] as const;
