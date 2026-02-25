@@ -64,6 +64,12 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Hatjar */}
+        <Script
+          src="https://t.contentsquare.net/uxa/e5ee503af46d4.js"
+          strategy="afterInteractive"
+        />
+
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
