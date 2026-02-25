@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ClientLayout } from "./client-layout";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "900"],
@@ -49,6 +50,20 @@ export default function RootLayout({
         />
       </head>
       <body className={`${montserrat.className}`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XQN6HBD0JD"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XQN6HBD0JD');
+          `}
+        </Script>
+
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
