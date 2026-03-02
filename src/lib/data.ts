@@ -4,6 +4,7 @@ import building_facade_jl1 from "@/assets/images/jl1/building_facade-jl1.jpg";
 import building_facade_jl2 from "@/assets/images/jl2/building_facade-jl2.jpg";
 import building_facade_jl3 from "@/assets/images/jl3/building_facade-jl3.jpg";
 import building_facade_muricy from "@/assets/images/muricy/building_facade-muricy.jpg";
+import building_facade_ponta_grossa from "@/assets/images/ponta-grossa/building_facade-ponta-grossa.jpg";
 
 import m2_360_1 from "@/assets/images/m2/360/img_360-1.jpg";
 import m2_360_2 from "@/assets/images/m2/360/img_360-2.jpg";
@@ -115,6 +116,15 @@ import muricy_environments_12 from "@/assets/images/muricy/environments/img_360-
 import muricy_environments_13 from "@/assets/images/muricy/environments/img_360-13.jpg";
 import muricy_environments_14 from "@/assets/images/muricy/environments/img_360-14.jpg";
 import muricy_environments_15 from "@/assets/images/muricy/environments/img_360-15.jpg";
+
+import ponta_grossa_environments_1 from "@/assets/images/ponta-grossa/environments/img_360-1.jpg";
+import ponta_grossa_environments_2 from "@/assets/images/ponta-grossa/environments/img_360-2.jpg";
+import ponta_grossa_environments_3 from "@/assets/images/ponta-grossa/environments/img_360-3.jpg";
+import ponta_grossa_environments_4 from "@/assets/images/ponta-grossa/environments/img_360-4.jpg";
+import ponta_grossa_environments_5 from "@/assets/images/ponta-grossa/environments/img_360-5.jpg";
+import ponta_grossa_environments_6 from "@/assets/images/ponta-grossa/environments/img_360-6.jpg";
+import ponta_grossa_environments_7 from "@/assets/images/ponta-grossa/environments/img_360-7.jpg";
+import ponta_grossa_environments_8 from "@/assets/images/ponta-grossa/environments/img_360-8.jpg";
 
 import type { StaticImageData } from "next/image";
 
@@ -596,6 +606,75 @@ export const buildings: Building[] = [
       {
         type: "Cobrança",
         title: "Cobrança",
+        description:
+          "Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.",
+      },
+      {
+        type: "CX",
+        title: "Customer Experience (CX)",
+        description:
+          "A experiência do cliente está no centro de tudo o que fazemos. Nosso atendimento de CX é voltado para garantir um suporte ágil, empático e resolutivo em todos os pontos de contato com o consumidor, promovendo satisfação, fidelização e valor à marca.",
+      },
+      {
+        type: "Treinamento",
+        title: "Treinamento",
+        description:
+          "Na Concentrix, acreditamos que o sucesso começa com uma base sólida. É por isso que o setor de Treinamento é uma peça fundamental da nossa cultura e operação. Aqui é onde os nossos Game Changers iniciam sua trajetória, recebendo todo o conhecimento, suporte e inspiração necessários para transformar experiências e impulsionar resultados.",
+      },
+    ],
+  },
+  {
+    city: "campos-gerais",
+    address: {
+      full_address:
+        "R. Sete de Setembro, 888, Centro, Ponta Grossa - PR, 84010-350",
+      coordinates: {
+        lat: -25.094,
+        lng: -50.157,
+      },
+    },
+    names: {
+      short: "PG",
+      long: "Ponta Grossa",
+    },
+    img: {
+      building_facade: building_facade_ponta_grossa,
+      pictures_360: [],
+      environments: [
+        ponta_grossa_environments_1,
+        ponta_grossa_environments_2,
+        ponta_grossa_environments_3,
+        ponta_grossa_environments_4,
+        ponta_grossa_environments_5,
+        ponta_grossa_environments_6,
+        ponta_grossa_environments_7,
+        ponta_grossa_environments_8,
+      ],
+    },
+    text: {
+      title: "PG",
+      description:
+        "Com uma decoração única e temática diferenciada, ele é o cenário perfeito para o treinamento inicial e o recrutamento de novos Game-changers. Cada detalhe é pensado para inspirar, capacitar e trazer à tona o melhor de cada pessoa, preparando-os para fazer a diferença desde o primeiro dia.",
+    },
+    values: [
+      {
+        value: 1532,
+        description:
+          "Game-changers espalhados por este prédio, a energia é contagiante! Cada pessoa, uma força para transformar o jogo e criar soluções incríveis. ",
+      },
+      {
+        value: 9,
+        description: "Operações ativas.",
+      },
+      {
+        value: 818,
+        description: "Postos de atendimento.",
+      },
+    ],
+    model_operations: [
+      {
+        type: "Tecnologia",
+        title: "Tecnologia",
         description:
           "Atendimento focado na recuperação de crédito, com estratégias personalizadas e abordagem humanizada. Nosso objetivo é ajudar os clientes a regularizarem suas pendências financeiras de forma eficiente, preservando sempre o bom relacionamento com a marca.",
       },

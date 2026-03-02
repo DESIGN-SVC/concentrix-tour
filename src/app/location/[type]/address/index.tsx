@@ -8,7 +8,7 @@ type HeaderProps = {
   city: string;
   address: string;
   background: StaticImageData;
-  listBuildings: string[];
+  listBuildings: { name: string; city: string }[];
 };
 
 export const Address = ({
@@ -44,12 +44,17 @@ export const Address = ({
         <AddressButtonRouter />
         <Dropdown.Root>
           {listBuildings?.map((building) => (
-            <Dropdown.List key={building} value={building} asChild>
+            <Dropdown.List
+              key={`${building.city}-${building.name}`}
+              value={building.name}
+              asChild
+            >
               <Link
                 appearance={"secondary"}
-                href={`/location/${city}?building=${building}`}
+                href={`/location/${building.city}?building=${building.name}`}
               >
-                <span className="capitalize">{city}</span>- {building}
+                <span className="capitalize">{building.city}</span> -{" "}
+                {building.name}
               </Link>
             </Dropdown.List>
           ))}
@@ -68,15 +73,15 @@ export const Address = ({
             "lg:font-bold lg:text-[3.5rem]/[4.2rem]",
           )}
         >
-          {title} -
+          {title} {city !== "curitiba" ? "" : "-"}
         </h1>
         <h4
           className={cx(
             "text-white text-2xl",
-            "lg:text-[3.5rem]/[4.2rem] lg:font-light",
+            "lg:text-[3.5rem]/[4.2rem] lg:font-light capitalize",
           )}
         >
-          ({city})
+          {city !== "curitiba" ? "" : city}
         </h4>
         <p className="text-white lg:flex-none lg:w-full">{address}</p>
       </div>

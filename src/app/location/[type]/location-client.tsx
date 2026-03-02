@@ -53,7 +53,10 @@ export function LocationClient({ city, allBuildings }: LocationClientProps) {
     active: building === el.names.short,
   }));
 
-  const listBuildings = allBuildings.map((el) => el.names.short);
+  const listBuildings = allBuildings.map((el) => ({
+    name: el.names.short,
+    city: el.city,
+  }));
 
   return (
     <main
